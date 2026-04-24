@@ -1,12 +1,13 @@
 numpy
 pandas
 scikit-learn
+# tensorflow==2.15.0
 opencv-python
 requests
 ipykernel
-tf2onnx
-onnxruntime
+# tf2onnx
+# onnxruntime
 matplotlib
-skl2onnx
+# skl2onnx
 emlearn
 optuna
