@@ -1,36 +1,36 @@
 <p align="center">
-    <img src="../Additionals/Empa-Accelerator-Workshops-Template-Banner.jpg" alt="Accelerator Workshops" 
+    <img src="../Additionals/Empa-Accelerator-Workshops-Template-Banner.jpg" alt="Tiremo® Accelerator Workshops" 
     style="display: block; margin: 0 auto"/>
 </p>
 
-## Demo: ST Platformları İçin Edge-AI Çözümleri Geliştirme
-Empa Electronics tarafından düzenlenen Accelerators Workshops University etkinliğimize hoş geldiniz. Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarla geliştilecek "El Karakteri Tanıma" demomuzun geliştirme adımlarında size rehberlik edecektir.
+## Aktivite-2: Tiremo®Cortex İçin Edge-AI Çözümleri Geliştirme
+Empa Electronics tarafından düzenlenen Tiremo® Accelerator Workshops etkinliğimize hoş geldiniz. Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarla geliştirilecek "El Hareketi Tanıma" (Hand Movement Recognition) demomuzun geliştirme adımlarında size rehberlik edecektir.
 
-Demo içeriği olan "El Karakteri Tanıma" uygulaması,  workshop için Empa Electronics tarafından tasarlanmış ve üretilmiş Kafa Kart (_Mind Board_) kullanılarak gerçekleştirilecektir. Kart üzerindeki ivmeölçer ve jiroskop sensörlerinden alınan toplam 6 eksenli sensör ölçümleri, bir yapay zeka modeline girdi olarak kullanılacak ve uç birim (Kafa Kart) üzerinde 6 farklı el karakterini sınıflandırmak amacıyla kullanılacaktır. Kafa kartın elde tutulmasıyla gerçekleştirilecek el karakterleri görsel ile açıklanmıştır.
+Aktivite içeriği olan "El Hareketi Tanıma" uygulaması, Empa Electronics tarafından tasarlanmış ve üretilmiş Tiremo®Cortex kullanılarak gerçekleştirilecektir. Kart üzerindeki ivmeölçerden alınan 3 eksenli sensör ölçümleri, bir yapay zeka modeline girdi olarak kullanılacak ve uç birim (Tiremo®Cortex) üzerinde 6 farklı el hareketini sınıflandırmak amacıyla kullanılacaktır. Tiremo®Cortex'in elde tutulmasıyla gerçekleştirilecek el hareketleri görsel ile açıklanmıştır.
 
-<img src="./Additionals/Hand-Characters.png" alt="Accelerator Workshops" width="800"/> 
+<img src="./Additionals/Hand-Characters.png" alt="El Hareketi Sınıfları" width="800"/>
 
-## Uygulama
-### ↳ [STM32 Platformlarında Uçta Yapay Zeka Çözümleri: El Karakteri Tanıma (Tensorflow ile CNN)](https://colab.research.google.com/drive/1hXrLQyYdJ7H2DgL7fW6nQtDmb_dmDuge)
-Demo içeriği olan "El Karakteri Tanıma" uygulamasının **Tensorflow** kütüphanesi kullanılarak oluşturulmuş **CNN** modeli ile Google Colab üzerindeki geliştirilmesini konu alan uygulama adımlarını içerir.
-### ↳ [STM32 Platformlarında Uçta Yapay Zeka Çözümleri: El Karakteri Tanıma (scikit-learn ile Random Forest)](https://colab.research.google.com/drive/1bbg1bfcpoIIn0kcI18elS_EtdG5Iee-f)
-Demo içeriği olan "El Karakteri Tanıma" uygulamasının **scikit-learn** kütüphanesi kullanılarak oluşturulmuş **Random Forest** modeli ile Google Colab üzerindeki geliştirilmesini konu alan uygulama adımlarını içerir.
+## Aktivite
+### ↳ [Tiremo®Cortex Platformunda Uçta Yapay Zeka Çözümleri: El Hareketi Tanıma (scikit-learn ile Random Forest)](https://colab.research.google.com/drive/1bbg1bfcpoIIn0kcI18elS_EtdG5Iee-f)
+Aktivite içeriği olan "El Hareketi Tanıma" uygulamasının scikit-learn kütüphanesi ile oluşturulmuş Random Forest modelinin **Google Colab** üzerinde geliştirilmesini ve Tiremo®Intelligence'a entegre edilmiş emlearn aracı ile uç birime taşınmasını konu alan uygulama adımlarını içerir.
 
-## ST Platformlarında Uçta Yapay Zeka
-
-**Tensorflow İle Makine Öğrenimi Modelleri Geliştirme**  
-Tensorflow, beraberinde barındırdığı Keras kütüphanesinin de gücüyle, modern derin öğrenme / yapay zeka uygulamalarının geliştirilmesine olanak sağlayan en önemli açık kaynaklı geliştirme kaynaklarından biridir. Tensorflow kütüphanesi, yüksek-seviye kullanım dili ve bu sayede edindiği kullanım kolaylığı sebebiyle workshop etkinliği içerisinde geliştirilecek derin öğrenme modelinin temeli olarak tercih edilmiştir.
+## Tiremo®Cortex Platformunda Uçta Yapay Zeka
 
 **scikit-learn ile Makine Öğrenimi Modelleri Geliştirme**  
-scikit-learn, geniş kapsamlı makine öğrenimi algoritmalarını kolay ve etkili bir şekilde uygulamaya olanak tanıyan, Python tabanlı açık kaynaklı bir kütüphanedir. Veri ön işleme, model oluşturma, değerlendirme ve hiperparametre optimizasyonu gibi birçok temel makine öğrenimi adımını içeren geniş araç seti sayesinde, akademik ve endüstriyel projelerde yaygın olarak kullanılmaktadır. Kullanım kolaylığı ve esnek yapısı nedeniyle, workshop etkinliği kapsamında geliştirilecek makine öğrenimi modeline temel oluşturmak için tercih edilmiştir.
+scikit-learn, Python tabanlı açık kaynaklı bir makine öğrenimi kütüphanesidir. Veri ön işlemeden model değerlendirmeye, hiperparametre optimizasyonundan farklı algoritmaların uygulanmasına kadar makine öğrenimi sürecinin neredeyse her adımı için hazır araçlar sunar. Sade yapısı ve geniş kullanım alanı sayesinde hem akademik hem de endüstriyel projelerde yaygın bir tercih olmuştur. Bu çalıştayda da geliştireceğimiz modellerin temelini oluşturacak kütüphane olarak kullanılacaktır.
 
-**STM32 Cube-AI İle Uçta Yapay Zeka Çözümleri Dağıtımı**  
-Geliştirilen bir makine öğrenmesi/derin öğrenme modelinin bir uç birimde, ST platformlarında tesis edilmesi, STMicroelectronics tarafından geliştirilen STM32CubeAI dönüşüm aracı ile sağlanabilmektedir. STM32CubeAI, pek çok popüler model formatı desteği ve dahili olarak gelen model sıkıştırma/derleme araçlarıyla geliştirilen modellerin kolayca çözümleştirilebilmesine imkan tanımaktadır.
+**emlearn ile Uçta Yapay Zeka Modelleri Dağıtımı**  
+emlearn, scikit-learn ile geliştirilmiş makine öğrenimi modellerini uç birimlerde çalıştırılabilir hale getiren bir model dönüşüm aracıdır. Kısıtlı kaynaklara sahip mikrodenetleyiciler göz önünde bulundurularak tasarlanmış olması sayesinde, eğitim aşamasında oluşturulan modellerin düşük bellek ve işlem gücüyle çalışacak biçimde optimize edilip uç birime taşınmasına imkân tanır.
 
-**Kaynaklar & Okuma Önerileri** 
+**Tiremo®Intelligence ile Baştan Sona Uçta Yapay Zeka**  
+Tiremo®Intelligence, makine öğrenimi modellerini eğitimden uç birime konuşlandırmaya kadar uçtan uca yöneten bir çözüm setidir. Popüler ML kütüphaneleriyle eğitilen modeller; dahili sıkıştırma ve derleme araçlarından geçerek emlearn, LiteRT Micro ve m2cgen gibi uç birim çalışma zamanlarına dönüştürülür ve Tiremo®Cortex gibi kaynak kısıtlı donanımlar üzerinde sensör tabanlı uygulamalarda koşturulur. Gömülü yazılım geliştiricileri ve AIoT uygulama ekiplerini hedefleyen bu iş akışı, modelden üretime geçişi tek bir çatı altında yönetir.
 
-1- [Tensorflow2 Quick Start for Beginners](https://www.tensorflow.org/tutorials/quickstart/beginner)
+**Kurulum**  
+Bu adımdaki tüm işlemler bulut tabanlı bir geliştirme ortamı olan **Google Colab** üzerinde gerçekleştirilecektir. Google Colab, kullanıcıların Python kodlarını tarayıcı üzerinden çalıştırmalarına olanak tanır ve TensorFlow, scikit-learn gibi popüler kütüphanelerin önceden yüklenmiş olarak gelmesi sayesinde hızlı bir başlangıç yapmanızı sağlar. Google Colab'a erişmek için "Aktivite" başlığı altındaki linkleri, Google hesabınızla giriş yaparak kullanabilirsiniz.
 
-2- [STM32Cube.AI - A Free Tool For Edge-AI Developers](https://stm32ai.st.com/stm32-cube-ai/)
-
-3- [scikit-learn: Machine Learning in Python](https://scikit-learn.org/stable/)
+**Kaynaklar & Okuma Önerileri**  
+1. [scikit-learn: Machine Learning in Python](https://scikit-learn.org/)
+2. [emlearn: Machine Learning for Embedded Systems](https://emlearn.readthedocs.io/)
+3. [m2cgen: Convert Trained Machine Learning Models to Code](https://github.com/BayesWitnesses/m2cgen)
+4. [LiteRT for Microcontrollers: A Runtime for TinyML Models](https://ai.google.dev/edge/litert/microcontrollers/)
+5. [TensorFlow2 Quick Start for Beginners](https://www.tensorflow.org/tutorials/quickstart/beginner)
