@@ -9,7 +9,7 @@
 **Merhaba!**  
 Empa Electronics tarafından düzenlenen Tiremo® Accelerator Workshops etkinlikleri serimize hoş geldiniz. Bu açık kaynaklı repository, workshop etkinliğimizde kullanabileceğiniz tüm gereksinimleri edinebilmeniz ve aktivitelere kolaylıkla eşlik edebilmeniz için sizinle paylaşılmıştır.
 
-**Tiremo®Cortex**
+**Tiremo®Cortex**  
 Empa Electronics tarafından tasarlanan Tiremo®Cortex, Edge AI ve Cloud-IoT uygulamalarınızda size eşlik etmek üzere hazırlanmış, yazılım desteğiyle birlikte sunulan bir geliştirme kartıdır. Kartın kalbinde, uygulama işlemcisi olarak görev yapan yüksek performanslı ARM® tabanlı Cortex®-M4F çekirdekli ABOV A34G43ARL2N mikrodenetleyici ve geliştirme sürecinizi kolaylaştıran bir hata ayıklayıcı bulunur. Kart üzerinde ayrıca ortam seslerini yakalayan analog bir MEMS mikrofon, 3 eksenli bir ivmeölçer ve çevresel koşulları takip edebileceğiniz sıcaklık ile nem sensörü yer alır. Tasarıma dahil ettiğimiz 10 kullanıcı LED'i ve kullanıcı düğmesiyle uygulamanızın görsel etkileşimini zenginleştirebilir, Wi-Fi ve Bluetooth LE modülü aracılığıyla verilerinizi buluta ya da diğer cihazlara rahatlıkla aktarabilirsiniz.
 
 **Sensörler & Connectivity**  
