@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./Additionals/Empa-Accelerator-Workshops-Template-Banner.jpg" alt="Tiremo® Accelerator Workshops" 
+    <img src="./Additionals/Empa-Accelerator-Workshops-Template-Banner.png" alt="Tiremo® Accelerator Workshops" 
     style="display: block; margin: 0 auto"/>
 </p>
 
