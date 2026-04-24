@@ -9,3 +9,5 @@ tf2onnx
 onnxruntime
 matplotlib
 skl2onnx
+emlearn
+optuna
