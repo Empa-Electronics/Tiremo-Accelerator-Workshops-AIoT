@@ -1,0 +1,9 @@
+../Core/Src/EMPA_Sensor.c:45:9:EMPA_SensorInit	8	static
+../Core/Src/EMPA_Sensor.c:93:9:EMPA_SensorProcess	8	static
+../Core/Src/EMPA_Sensor.c:111:6:EMPA_SensorPrint	16	static
+../Core/Src/EMPA_Sensor.c:146:9:sht40_sensor_process	16	static
+../Core/Src/EMPA_Sensor.c:153:9:ism330_sensor_process	32	static
+../Core/Src/EMPA_Sensor.c:171:9:imp34_sensor_process	8	static
+../Core/Src/EMPA_Sensor.c:187:6:MDF_DMAConfig	4	static
+../Core/Src/EMPA_Sensor.c:195:6:HAL_MDF_AcqHalfCpltCallback	16	static
+../Core/Src/EMPA_Sensor.c:200:6:HAL_MDF_AcqCpltCallback	16	static

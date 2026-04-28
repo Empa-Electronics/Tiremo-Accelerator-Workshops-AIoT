@@ -1,0 +1,4 @@
+../Core/Src/EMPA_DataCollector.c:25:6:EMPA_DataCollectorProcess	18
+../Core/Src/EMPA_DataCollector.c:108:6:fill_accelerator_buffer	2
+../Core/Src/EMPA_DataCollector.c:120:6:fill_gyro_buffer	2
+../Core/Src/EMPA_DataCollector.c:131:6:fill_accelerator_and_gyro_buffer	2

@@ -9,9 +9,6 @@
 **Merhaba!**  
 Empa Electronics tarafından düzenlenen Tiremo® Accelerator Workshops etkinlikleri serimize hoş geldiniz. Bu açık kaynaklı repository, workshop etkinliğimizde kullanabileceğiniz tüm gereksinimleri edinebilmeniz ve aktivitelere kolaylıkla eşlik edebilmeniz için sizinle paylaşılmıştır.
 
-**Tiremo®Cortex**  
-Empa Electronics tarafından tasarlanan Tiremo®Cortex, Edge AI ve Cloud-IoT uygulamalarınızda size eşlik etmek üzere hazırlanmış, yazılım desteğiyle birlikte sunulan bir geliştirme kartıdır. Kartın kalbinde, uygulama işlemcisi olarak görev yapan yüksek performanslı ARM® tabanlı Cortex®-M4F çekirdekli ABOV A34G43ARL2N mikrodenetleyici ve geliştirme sürecinizi kolaylaştıran bir hata ayıklayıcı bulunur. Kart üzerinde ayrıca ortam seslerini yakalayan analog bir MEMS mikrofon, 3 eksenli bir ivmeölçer ve çevresel koşulları takip edebileceğiniz sıcaklık ile nem sensörü yer alır. Tasarıma dahil ettiğimiz 10 kullanıcı LED'i ve kullanıcı düğmesiyle uygulamanızın görsel etkileşimini zenginleştirebilir, Wi-Fi ve Bluetooth LE modülü aracılığıyla verilerinizi buluta ya da diğer cihazlara rahatlıkla aktarabilirsiniz.
-
 **Sensörler & Connectivity**  
 Sensörler, fiziksel olayları algılayarak elektronik sinyallere (yani verilere) dönüştüren cihazlardır. Bu veriler, analiz edilmek üzere uç birimlere veya bulut sistemlerine bağlantı protokolleriyle iletilir. MQTT gibi hafif yapılı protokoller, sensörlerden gelen verilerin düşük bant genişliğiyle hızlı ve güvenilir bir şekilde aktarılmasını sağlar. Bulut IoT platformları (örneğin, AWS IoT, Azure IoT Hub), bu verilerin merkezi bir yapıda işlenmesine, depolanmasına ve görselleştirilmesine olanak tanır. Uç sistemlerde doğru sensör seçimi ve etkili bağlantı çözümleri, düşük gecikme ve enerji verimliliğiyle optimize edilmiş IoT uygulamaları geliştirilmesinde kilit rol oynamaktadır.
 
@@ -21,8 +18,8 @@ Bir uygulama için geliştirilen yapay zeka çözümlerinin işletilmesi modern 
 ## Geliştirme Ortamı Kurulumu
 Aktivitelere başlamadan önce aşağıdaki ortak kurulum kılavuzunu takip ederek geliştirme ortamınızı hazırlayınız. Bu kılavuz her iki aktivite için geçerlidir ve yalnızca bir kez uygulanması yeterlidir.
 
-### ↳ [Geliştirme Ortamı Kurulumu — VS Code & ABOV A34G43x](SETUP_VSCODE.md)
-VS Code, CMake, Ninja, ARM GCC Toolchain kurulumu ve proje derleme/yükleme adımlarını içerir.
+### ↳ [Geliştirme Ortamı Kurulumu](Kurulum.md)
+Etkiliğinde kullanılacak çalışma ortamlarının kurulum adımlarını içerir.
 
 ---
 
@@ -41,13 +38,13 @@ Repository içerisindeki her bir "Activity" klasörü, etkinliğimizde yer alaca
 
 ```
 Workshop Repository
-├── SETUP_VSCODE.md                              ← Ortak geliştirme ortamı kurulum kılavuzu
+├── Kurulum.md                                  ← Ortak geliştirme ortamı kurulum kılavuzu
 ├── Activity1_Sensor_Connectivity_and_MQTT/
 │   ├── Project_MQTT/
-│   │   └── AUDK32_A34xxxx-1.0.11/           ← ABOV A34G43x MCU firmware projesi
-│   │       ├── Example/Source/TmplUserApp/  ← Uygulama kaynak kodu
-│   │       ├── Platform/HAL/                ← HAL sürücüleri
-│   │       └── flash.bat                    ← Tek komutla derle + yükle
+│   │   └── MQTT_Project/                       ← STM32U5 MCU firmware projesi
+│   │       ├── Core/Src/                       ← Uygulama kaynak kodu
+│   │       ├── Drivers/STM32U5xx_HAL_Driver/   ← HAL sürücüleri
+│   │       └── .project                        ← Proje dosyası
 │   └── Aktivite-1 Kılavuzu (README.md)
 │
 └── Activity2_EdgeAI_Solutions_and_Deployment/
@@ -59,13 +56,13 @@ Workshop Repository
 Etkinliğimizde kullanılacak çalışma ortamlarının kurulumları sonrası hazırladığımız checklist ile gereksinimlerin kontrolünü sağlayabilirsiniz.
 
 **Aktivite-1 Tiremo®Cortex ile Veri Toplama ve MQTT Haberleşmesi**
-- [ ] [SETUP_VSCODE.md](SETUP_VSCODE.md) kılavuzu tamamlandı (VS Code, CMake, Ninja, ARM GCC)
-- [ ] `Activity1_Sensor_Connectivity_and_MQTT/Project_MQTT/AUDK32_A34xxxx-1.0.11/` projesi VS Code'da açıldı ve başarıyla derlendi
-- [ ] Aktivite-1 Kaynak Dosyaları
+- [ ] [Kurulum.md](Kurulum.md) kılavuzu tamamlandı.
+- [ ] `Activity1_Sensor_Connectivity_and_MQTT/Project_MQTT/MQTT_Project/` projesi STM32CubeIDE'de açıldı ve başarıyla derlendi.
+- [ ] Aktivite-1 Kaynak Dosyaları.
 
 **Aktivite-2 Tiremo®Intelligence ile Uçta Yapay Zeka Çözümleri Geliştirme**
-- [ ] [SETUP_VSCODE.md](SETUP_VSCODE.md) kılavuzu tamamlandı (MCU'ya model yüklemek için gereklidir)
-- [ ] `Activity1_Sensor_Connectivity_and_MQTT/Project_MQTT/AUDK32_A34xxxx-1.0.11/` projesi VS Code'da açıldı ve başarıyla derlendi
+- [ ] [Kurulum.md](Kurulum.md) kılavuzu tamamlandı (MCU'ya model yüklemek için gereklidir)
+- [ ] `Activity2_EdgeAI_Solutions_and_Deployment/Project_DataLogger/` projesi STM32CubeIDE'de açıldı ve başarıyla derlendi
 - [ ] Aktivite-2 Kaynak Dosyaları (Tiremo®Intelligence)
 
 ## Güncellemeler

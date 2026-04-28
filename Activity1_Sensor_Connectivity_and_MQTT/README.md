@@ -8,31 +8,11 @@ Empa Electronics tarafından düzenlenen Accelerators Workshops University etkin
 
 ## Kurulum
 Öncelikle, aşağıdaki bağlantıyı kullanarak çalışma ortamı kurulum adımlarını takip ediniz.
-### ↳ [Çalışma Ortamı Kurulumu (VS Code)](../SETUP_VSCODE.md)
+### ↳ [Çalışma Ortamı Kurulumu](../Kurulum.md)
 Her iki aktivite için ortak olan gerekli program ve gereçlerin kurulum adımlarını içerir.
 
 ## MCU Projesi
-Aktivite firmware'i `Project_MQTT/AUDK32_A34xxxx-1.0.11/` klasöründe yer almaktadır. VS Code'da bu klasörü açarak derleme ve yükleme adımlarını gerçekleştirebilirsiniz.
-
-```
-Activity1_Sensor_Connectivity_and_MQTT/
-└── Project_MQTT/
-    └── AUDK32_A34xxxx-1.0.11/           ← Bu klasörü VS Code'da açın
-        ├── Example/Source/TmplUserApp/
-        │   ├── main.c                    ← Uygulama giriş noktası
-        │   ├── prv_user_code.c           ← Ana akış: sensör oku → MQTT yayınla
-        │   ├── MQTT_Library/             ← AWS IoT Core MQTT istemcisi
-        │   ├── SHT40/                    ← Sıcaklık & nem sürücüsü
-        │   ├── LISDE12TR/                ← İvmeölçer sürücüsü
-        │   ├── MP23ABS1/                 ← MEMS mikrofon sürücüsü
-        │   ├── ESP32_AT_Test/            ← Wi-Fi modülü test & init
-        │   └── Sensor/                   ← Ortak sensör okuma katmanı
-        ├── CMakeLists.txt
-        ├── CMakePresets.json
-        └── flash.bat                     ← Tek komutla derle + yükle
-```
-
-Derleme ve yükleme adımları için → [SETUP_VSCODE.md](../SETUP_VSCODE.md)
+Aktivite firmware'i `Project_MQTT/MQTT_Project/` klasöründe yer almaktadır. STM32CubeIDE'de bu klasörü açarak derleme ve yükleme adımlarını gerçekleştirebilirsiniz.
 
 ## Sensör Bağlanabilirliği ve MQTT
 

@@ -1,0 +1,2 @@
+../Core/Src/interrupt_handlers.c:19:6:HAL_TIM_PeriodElapsedCallback	5
+../Core/Src/interrupt_handlers.c:41:6:HAL_GPIO_EXTI_Falling_Callback	4
