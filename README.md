@@ -9,6 +9,9 @@
 **Merhaba!**  
 Empa Electronics tarafından düzenlenen Tiremo® Accelerator Workshops etkinlikleri serimize hoş geldiniz. Bu açık kaynaklı repository, workshop etkinliğimizde kullanabileceğiniz tüm gereksinimleri edinebilmeniz ve aktivitelere kolaylıkla eşlik edebilmeniz için sizinle paylaşılmıştır.
 
+**Tiremo®Cortex**  
+Empa Electronics tarafından tasarlanan Tiremo®Cortex, Edge AI ve Cloud-IoT uygulamalarınızda size eşlik etmek üzere hazırlanmış, yazılım desteğiyle birlikte sunulan bir geliştirme kartıdır. Kartın kalbinde, uygulama işlemcisi olarak görev yapan yüksek performanslı ARM® tabanlı 32 bit çekirdekli bir mikrodenetleyici ve geliştirme sürecinizi kolaylaştıran bir hata ayıklayıcı bulunur. Kart üzerinde ayrıca ortam seslerini yakalayan analog bir MEMS mikrofon, 3 eksenli bir ivmeölçer ve çevresel koşulları takip edebileceğiniz sıcaklık ile nem sensörü yer alır. Tasarıma dahil ettiğimiz 10 kullanıcı LED'i ve kullanıcı düğmesiyle uygulamanızın görsel etkileşimini zenginleştirebilir, Wi-Fi ve Bluetooth LE modülü aracılığıyla verilerinizi buluta ya da diğer cihazlara rahatlıkla aktarabilirsiniz.
+
 **Sensörler & Connectivity**  
 Sensörler, fiziksel olayları algılayarak elektronik sinyallere (yani verilere) dönüştüren cihazlardır. Bu veriler, analiz edilmek üzere uç birimlere veya bulut sistemlerine bağlantı protokolleriyle iletilir. MQTT gibi hafif yapılı protokoller, sensörlerden gelen verilerin düşük bant genişliğiyle hızlı ve güvenilir bir şekilde aktarılmasını sağlar. Bulut IoT platformları (örneğin, AWS IoT, Azure IoT Hub), bu verilerin merkezi bir yapıda işlenmesine, depolanmasına ve görselleştirilmesine olanak tanır. Uç sistemlerde doğru sensör seçimi ve etkili bağlantı çözümleri, düşük gecikme ve enerji verimliliğiyle optimize edilmiş IoT uygulamaları geliştirilmesinde kilit rol oynamaktadır.
 
@@ -68,6 +71,8 @@ Etkinliğimizde kullanılacak çalışma ortamlarının kurulumları sonrası ha
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
 ```
+Versiyon-2: 28 Nisan 2026
+- Yıldız Teknik Üniversitesi 30 Nisan 2026 tarihli etkinlik için gerekli çalışma ortamları ve materyaller 'ytu-2026' branchine eklendi.
 Versiyon-1: 24 Nisan 2026  
 Tüm aktiviteler için temel bileşenleri içeren kılavuzlar repository içerisinde paylaşıldı.
 ```

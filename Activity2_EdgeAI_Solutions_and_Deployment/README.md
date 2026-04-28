@@ -31,8 +31,8 @@ Bu aktivite iki ayrı ortam gerektirir:
 - **Model Geliştirme (Google Colab):** Makine öğrenimi modelinin eğitimi ve dönüştürülmesi, bulut tabanlı geliştirme ortamı olan Google Colab üzerinde gerçekleştirilecektir. "Aktivite" başlığı altındaki linke Google hesabınızla giriş yaparak erişebilirsiniz.
 
 - **MCU'ya Yükleme (VS Code + AUDK32):** Eğitilen modelin Tiremo®Cortex üzerine yüklenmesi için MCU geliştirme ortamı gerekmektedir.
-  ### ↳ [Geliştirme Ortamı Kurulumu — VS Code & ABOV A34G43x](../SETUP_VSCODE.md)
-  VS Code, CMake, Ninja ve ARM GCC kurulumu ile `Activity1_Sensor_Connectivity_and_MQTT/Project_MQTT/AUDK32_A34xxxx-1.0.11/` projesini derleme adımlarını içerir.
+  ### ↳ [Geliştirme Ortamı Kurulumu](Kurulum.md)
+  Etkiliğinde kullanılacak çalışma ortamlarının kurulum adımlarını içerir.
 
 **Kaynaklar & Okuma Önerileri**  
 1. [scikit-learn: Machine Learning in Python](https://scikit-learn.org/)

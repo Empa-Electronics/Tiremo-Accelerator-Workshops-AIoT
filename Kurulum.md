@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="../Additionals/Empa-Accelerator-Workshops-Template-Banner.jpg" alt="Accelerator Workshops" 
+    <img src="Additionals/Empa-Accelerator-Workshops-Template-Banner.png" alt="Accelerator Workshops" 
     style="display: block; margin: 0 auto"/>
 </p>
 
