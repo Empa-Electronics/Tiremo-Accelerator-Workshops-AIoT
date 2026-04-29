@@ -108,4 +108,4 @@ printf("%s\r\n", tiremo_label_out)   ← Seri port çıktısı
 
 Sıfırdan başlamak yerine mevcut DataCollector projesine AI çıkarımı eklemek için aşağıdaki kılavuzu izleyebilirsiniz:
 
-### ↳ [Edge-AI Entegrasyon Kılavuzu](../../EdgeAI_Integration_Guide.md)
+### ↳ [Edge-AI Entegrasyon Kılavuzu](../../EdgeAI_Entegrasyon.md)

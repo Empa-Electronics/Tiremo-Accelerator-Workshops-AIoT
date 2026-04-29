@@ -184,3 +184,5 @@ CubeIDE Proje Ayarları
 ## Kaynaklar
 
 - [emlearn: Machine Learning for Embedded Systems](https://emlearn.readthedocs.io/)
+- [Project_DataCollector README](Projects/Project_DataCollector/README.md)
+- [Project_EdgeAI README](Projects/Project_EdgeAI/README.md)
