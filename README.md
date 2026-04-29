@@ -51,7 +51,14 @@ Workshop Repository
 │   └── Aktivite-1 Kılavuzu (README.md)
 │
 └── Activity2_EdgeAI_Solutions_and_Deployment/
-    ├── Kaynak Kod & Materyaller
+    ├── Projects/
+    │   ├── Project_DataCollector/              ← Veri toplama MCU firmware projesi
+    │   └── Project_EdgeAI/                     ← Edge-AI çıkarım MCU firmware projesi
+    ├── tiremo_api/                             ← Tiremo® AI çalışma zamanı
+    ├── Datasets/                               ← Eğitim ve doğrulama veri setleri
+    ├── Models/                                 ← Eğitilmiş model dosyası
+    ├── EdgeAI_Entegrasyon.md                   ← DataCollector → EdgeAI entegrasyon kılavuzu
+    ├── End-to-End-EdgeAI-Tiremo-Accelerator-Workshops.ipynb
     └── Aktivite-2 Kılavuzu (README.md)
 ```
 
@@ -61,18 +68,19 @@ Etkinliğimizde kullanılacak çalışma ortamlarının kurulumları sonrası ha
 **Aktivite-1 Tiremo®Cortex ile Veri Toplama ve MQTT Haberleşmesi**
 - [ ] [Kurulum.md](Kurulum.md) kılavuzu tamamlandı.
 - [ ] `Activity1_Sensor_Connectivity_and_MQTT/Project_MQTT/MQTT_Project/` projesi STM32CubeIDE'de açıldı ve başarıyla derlendi.
-- [ ] Aktivite-1 Kaynak Dosyaları.
+- [ ] Aktivite-1 Kaynak Dosyaları
 
 **Aktivite-2 Tiremo®Intelligence ile Uçta Yapay Zeka Çözümleri Geliştirme**
 - [ ] [Kurulum.md](Kurulum.md) kılavuzu tamamlandı (MCU'ya model yüklemek için gereklidir)
-- [ ] `Activity2_EdgeAI_Solutions_and_Deployment/Project_DataLogger/` projesi STM32CubeIDE'de açıldı ve başarıyla derlendi
+- [ ] `Activity2_EdgeAI_Solutions_and_Deployment/Projects/Project_DataCollector/` projesi STM32CubeIDE'de açıldı ve başarıyla derlendi.
+- [ ] `Activity2_EdgeAI_Solutions_and_Deployment/Projects/Project_EdgeAI/` projesi STM32CubeIDE'de açıldı ve başarıyla derlendi.
 - [ ] Aktivite-2 Kaynak Dosyaları (Tiremo®Intelligence)
 
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
 ```
 Versiyon-2: 28 Nisan 2026
-- Yıldız Teknik Üniversitesi 30 Nisan 2026 tarihli etkinlik için gerekli çalışma ortamları ve materyaller 'ytu-2026' branchine eklendi.
+- Yıldız Teknik Üniversitesi 30 Nisan 2026 tarihli etkinlik için gerekli çalışma ortamları ve materyaller 'ytu-2026' branch'ine eklendi.
 Versiyon-1: 24 Nisan 2026  
 Tüm aktiviteler için temel bileşenleri içeren kılavuzlar repository içerisinde paylaşıldı.
 ```
