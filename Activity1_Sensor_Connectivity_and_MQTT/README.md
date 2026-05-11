@@ -4,11 +4,11 @@
 </p>
 
 # 1) Sensör Bağlanabilirliği ve MQTT
-Empa Electronics tarafından düzenlenen Accelerators Workshops University etkinliğimize hoş geldiniz. Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarla geliştilecek "Uçtan Uca MQTT Veri Toplayıcı" uygulamamızın geliştirme adımlarında size rehberlik edecektir.
+Empa Electronics tarafından düzenlenen Tiremo® Accelerator Workshops etkinliğimize hoş geldiniz. Bu kılavuz, "Uçtan Uca MQTT Veri Toplayıcı" uygulamamızın geliştirileceği adımlarda size rehberlik edecektir.
 
 ## Kurulum
 Öncelikle, aşağıdaki bağlantıyı kullanarak çalışma ortamı kurulum adımlarını takip ediniz.
-### ↳ [Çalışma Ortamı Kurulumu (VS Code)](../SETUP_VSCODE.md)
+### ↳ [Çalışma Ortamı Kurulumu (VS Code)](../Kurulum.md)
 Her iki aktivite için ortak olan gerekli program ve gereçlerin kurulum adımlarını içerir.
 
 ## MCU Projesi
@@ -32,7 +32,7 @@ Activity1_Sensor_Connectivity_and_MQTT/
         └── flash.bat                     ← Tek komutla derle + yükle
 ```
 
-Derleme ve yükleme adımları için → [SETUP_VSCODE.md](../SETUP_VSCODE.md)
+Derleme ve yükleme adımları için → [Kurulum.md](../Kurulum.md)
 
 ## Sensör Bağlanabilirliği ve MQTT
 

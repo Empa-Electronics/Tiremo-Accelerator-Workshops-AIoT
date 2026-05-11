@@ -6,14 +6,15 @@
 ## Aktivite-2: Tiremo®Cortex İçin Edge-AI Çözümleri Geliştirme
 Empa Electronics tarafından düzenlenen Tiremo® Accelerator Workshops etkinliğimize hoş geldiniz. Bu kılavuz, modern makine öğrenimi kütüphaneleri ve standart yaklaşımlarla geliştirilecek "El Hareketi Tanıma" (Hand Movement Recognition) demomuzun geliştirme adımlarında size rehberlik edecektir.
 
-Aktivite içeriği olan "El Hareketi Tanıma" uygulaması, Empa Electronics tarafından tasarlanmış ve üretilmiş Tiremo®Cortex kullanılarak gerçekleştirilecektir. Kart üzerindeki ivmeölçerden alınan 3 eksenli sensör ölçümleri, bir yapay zeka modeline girdi olarak kullanılacak ve uç birim (Tiremo®Cortex) üzerinde 6 farklı el hareketini sınıflandırmak amacıyla kullanılacaktır. Tiremo®Cortex'in elde tutulmasıyla gerçekleştirilecek el hareketleri görsel ile açıklanmıştır.
+Aktivite içeriği olan "El Hareketi Tanıma" uygulaması, Empa Electronics tarafından tasarlanmış ve üretilmiş Tiremo®Cortex kullanılarak gerçekleştirilecektir. Kart üzerindeki ivmeölçerden alınan 3 eksenli sensör ölçümleri, bir yapay zeka modeline girdi olarak kullanılacak ve uç birim (Tiremo®Cortex) üzerinde 5 farklı el hareketini sınıflandırmak amacıyla kullanılacaktır. Tiremo®Cortex'in elde tutulmasıyla gerçekleştirilecek el hareketleri görsel ile açıklanmıştır.
 
 <img src="./Additionals/Hand-Characters.png" alt="El Hareketi Sınıfları" width="800"/>
 
 ## Aktivite
-### ↳ [Tiremo®Cortex Platformunda Uçta Yapay Zeka Çözümleri: El Hareketi Tanıma (scikit-learn ile Random Forest)](https://colab.research.google.com/drive/1bbg1bfcpoIIn0kcI18elS_EtdG5Iee-f)
-Aktivite içeriği olan "El Hareketi Tanıma" uygulamasının scikit-learn kütüphanesi ile oluşturulmuş Random Forest modelinin **Google Colab** üzerinde geliştirilmesini ve Tiremo®Intelligence'a entegre edilmiş emlearn aracı ile uç birime taşınmasını konu alan uygulama adımlarını içerir.
-
+### ↳ 1. [Tiremo®Cortex Platformunda Uçta Yapay Zeka Çözümleri: El Hareketi Tanıma (scikit-learn ile Random Forest ve emlearn ile Model Dönüşümü)](https://colab.research.google.com/drive/1bbg1bfcpoIIn0kcI18elS_EtdG5Iee-f)
+Aktivite içeriği olan "El Hareketi Tanıma" uygulamasının scikit-learn kütüphanesi ile oluşturulmuş Random Forest modelinin **Google Colab** üzerinde geliştirilmesini ve Tiremo®Intelligence'a entegre edilmiş emlearn aracı ile uç birime taşınmasını konu alan uygulama adımlarını içerir.  
+### ↳ 2. [Edge-AI Entegrasyonu: DataCollector → EdgeAI](./EdgeAI_Entegrasyon.md)
+Google Colab'da eğitilen modelin Tiremo®Cortex üzerinde çalışacak biçimde **Project_DataCollector** firmware projesine entegre edilmesini, ve EdgeAI projesini elde edene kadarki adımları konu alan uygulama kılavuzunu içerir.
 ## Tiremo®Cortex Platformunda Uçta Yapay Zeka
 
 **scikit-learn ile Makine Öğrenimi Modelleri Geliştirme**  
@@ -31,8 +32,8 @@ Bu aktivite iki ayrı ortam gerektirir:
 - **Model Geliştirme (Google Colab):** Makine öğrenimi modelinin eğitimi ve dönüştürülmesi, bulut tabanlı geliştirme ortamı olan Google Colab üzerinde gerçekleştirilecektir. "Aktivite" başlığı altındaki linke Google hesabınızla giriş yaparak erişebilirsiniz.
 
 - **MCU'ya Yükleme (VS Code + AUDK32):** Eğitilen modelin Tiremo®Cortex üzerine yüklenmesi için MCU geliştirme ortamı gerekmektedir.
-  ### ↳ [Geliştirme Ortamı Kurulumu — VS Code & ABOV A34G43x](../SETUP_VSCODE.md)
-  VS Code, CMake, Ninja ve ARM GCC kurulumu ile `Activity1_Sensor_Connectivity_and_MQTT/Project_MQTT/AUDK32_A34xxxx-1.0.11/` projesini derleme adımlarını içerir.
+  [Geliştirme Ortamı Kurulumu — VS Code & ABOV A34G43x](../Kurulum.md)
+  VS Code, CMake, Ninja ve ARM GCC kurulumu ile `Activity2_EdgeAI_Solutions_and_Deployment/Projects/Project_DataCollector/` projesini derleme ve yükleme adımlarını içerir.
 
 **Kaynaklar & Okuma Önerileri**  
 1. [scikit-learn: Machine Learning in Python](https://scikit-learn.org/)

@@ -1,0 +1,19 @@
+./objects/sensirion_i2c_hal.o: \
+  ..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c_hal.c \
+  ..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c_hal.h \
+  ..\..\..\Source\TmplUserApp\Sht40\sensirion_config.h \
+  ..\..\..\Source\TmplUserApp\Sht40\sensirion_common.h \
+  ..\..\..\..\ProductConfig\Config\abov_config.h \
+  ..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h \
+  ..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h \
+  ..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h \
+  ..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h \
+  ..\..\..\..\ProductConfig\Config\abov_module.h \
+  ..\..\..\..\ProductConfig\Config\abov_module_config.h \
+  ..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h \
+  ..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h \
+  ..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h \
+  ..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h \
+  ..\..\..\..\Platform\HAL\Include\hal_i2c.h \
+  ..\..\..\..\Platform\HAL\Include\hal_common.h \
+  ..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_log.h

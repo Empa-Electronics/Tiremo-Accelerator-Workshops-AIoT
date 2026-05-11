@@ -1,0 +1,796 @@
+Dependencies for Project 'tmpl_userapp', Target 'A34G43x': (DO NOT MODIFY !)
+CompilerVersion: 6240000::V6.24::ARMCLANG
+F (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)()
+F (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)()
+F (..\..\..\Source\TmplUserApp\main.c)(0x69EEFF3D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/main.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\Source\TmplUserApp\prv_scu_clk.c)(0x69EEFF3D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/prv_scu_clk.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_scu_clk.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\Source\TmplUserApp\prv_user_code.c)(0x69EF2109)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/prv_user_code.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\Source\TmplUserApp\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_i2c.h)(0x69EEFF45)
+I (..\..\..\Source\TmplUserApp\LISDE12TR\LIS2DE12_app.h)(0x69EEFF3E)
+F (..\..\..\Source\TmplUserApp\user_adc.c)(0x69EEFF3D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/user_adc.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_adc.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\Source\TmplUserApp\user_adc_isr.c)(0x69EEFF3D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/user_adc_isr.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_adc.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\Source\TmplUserApp\user_i2c.c)(0x69EEFF3D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/user_i2c.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_i2c.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\Source\TmplUserApp\user_i2c_isr.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/user_i2c_isr.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_i2c.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\Source\TmplUserApp\user_timer1.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/user_timer1.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_timer1.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\Source\TmplUserApp\user_timer1_isr.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/user_timer1_isr.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_timer1.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\Source\TmplUserApp\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+F (..\..\..\Source\TmplUserApp\user_uart.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/user_uart.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\Source\TmplUserApp\user_uart_isr.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/user_uart_isr.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\..\Framework\CMSIS\Device\ABOV\Source\startup_a34xxxx.c)(0x69EEFF3F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/startup_a34xxxx.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Framework\CMSIS\Device\ABOV\Source\system_a34xxxx.c)(0x69EEFF3F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/system_a34xxxx.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\ADC\hal_adc.c)(0x69EEFF40)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_adc.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_adc.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\ADC\hal_adc_prv.h)(0x69EEFF40)
+I (..\..\..\..\Platform\HAL\ADC\Vx\V1x\hal_adc_v1x.h)(0x69EEFF40)
+I (..\..\..\..\Platform\HAL\ADC\Vx\V1x\hal_adc_v_01_00_05.h)(0x69EEFF41)
+I (..\..\..\..\Platform\HAL\HPL\Include\hpl_nmi.h)(0x69EEFF43)
+F (..\..\..\..\Platform\HAL\AES\hal_aes.c)(0x69EEFF41)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_aes.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\CMP\hal_cmp.c)(0x69EEFF41)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_cmp.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\CRC\hal_crc.c)(0x69EEFF41)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_crc.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\FMC\hal_fmc.c)(0x69EEFF42)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_fmc.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\FRT\hal_frt.c)(0x69EEFF43)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_frt.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\HPL\DMA\hpl_dma.c)(0x69EEFF43)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hpl_dma.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\HPL\NMI\hpl_nmi.c)(0x69EEFF43)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hpl_nmi.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\HPL\Include\hpl_nmi.h)(0x69EEFF43)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\HPL\NMI\hpl_nmi_prv.h)(0x69EEFF43)
+I (..\..\..\..\Platform\HAL\HPL\NMI\Vx\V2x\hpl_nmi_v2x.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\HPL\NMI\Vx\V2x\hpl_nmi_v_02_00_03.h)(0x69EEFF44)
+F (..\..\..\..\Platform\HAL\I2C\hal_i2c.c)(0x69EEFF44)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_i2c.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_i2c.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\I2C\hal_i2c_prv.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\I2C\Vx\V1x\hal_i2c_v1x.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\I2C\Vx\V1x\hal_i2c_v_01_00_00.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\HPL\Include\hpl_nmi.h)(0x69EEFF43)
+F (..\..\..\..\Platform\HAL\MPWM\hal_mpwm.c)(0x69EEFF46)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_mpwm.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\PCU\hal_pcu.c)(0x69EEFF46)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_pcu.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\PCU\hal_pcu_prv.h)(0x69EEFF46)
+I (..\..\..\..\Platform\HAL\PCU\Vx\V2x\hal_pcu_v2x.h)(0x69EEFF46)
+I (..\..\..\..\Platform\HAL\PCU\Vx\V2x\hal_pcu_v_02_00_05.h)(0x69EEFF46)
+I (..\..\..\..\Platform\HAL\HPL\Include\hpl_nmi.h)(0x69EEFF43)
+F (..\..\..\..\Platform\HAL\PGA\hal_pga.c)(0x69EEFF47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_pga.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\QEI\hal_qei.c)(0x69EEFF47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_qei.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\RNG\hal_rng.c)(0x69EEFF47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_rng.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\SCU\hal_scu_pwr.c)(0x69EEFF48)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_scu_pwr.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\SCU\hal_scu_lvd.c)(0x69EEFF48)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_scu_lvd.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\SCU\hal_scu_clk.c)(0x69EEFF48)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_scu_clk.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_scu.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_scu_clk.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\SCU\hal_scu_prv.h)(0x69EEFF48)
+I (..\..\..\..\Platform\HAL\SCU\Vx\hal_scu_vx.h)(0x69EEFF48)
+I (..\..\..\..\Platform\HAL\SCU\Vx\V2x\hal_scu_v2x.h)(0x69EEFF48)
+I (..\..\..\..\Platform\HAL\SCU\Vx\V2x\hal_scu_v_02_00_03.h)(0x69EEFF48)
+I (..\..\..\..\Platform\HAL\HPL\Include\hpl_nmi.h)(0x69EEFF43)
+F (..\..\..\..\Platform\HAL\SCU\hal_scu.c)(0x69EEFF48)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_scu.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_scu.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\SCU\hal_scu_prv.h)(0x69EEFF48)
+I (..\..\..\..\Platform\HAL\SCU\Vx\hal_scu_vx.h)(0x69EEFF48)
+I (..\..\..\..\Platform\HAL\SCU\Vx\V2x\hal_scu_v2x.h)(0x69EEFF48)
+I (..\..\..\..\Platform\HAL\SCU\Vx\V2x\hal_scu_v_02_00_03.h)(0x69EEFF48)
+I (..\..\..\..\Platform\HAL\HPL\Include\hpl_nmi.h)(0x69EEFF43)
+F (..\..\..\..\Platform\HAL\SPI\hal_spi.c)(0x69EEFF49)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_spi.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\Timer1\hal_timer1.c)(0x69EEFF49)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_timer1.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_timer1.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Timer1\hal_timer1_prv.h)(0x69EEFF49)
+I (..\..\..\..\Platform\HAL\Timer1\Vx\V1x\hal_timer1_v1x.h)(0x69EEFF49)
+I (..\..\..\..\Platform\HAL\Timer1\Vx\V1x\hal_timer1_v_01_02_00.h)(0x69EEFF49)
+I (..\..\..\..\Platform\HAL\HPL\Include\hpl_nmi.h)(0x69EEFF43)
+F (..\..\..\..\Platform\HAL\UART\hal_uart.c)(0x69EEFF49)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_uart.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\UART\hal_uart_prv.h)(0x69EEFF49)
+I (..\..\..\..\Platform\HAL\UART\Vx\V1x\hal_uart_v1x.h)(0x69EEFF49)
+I (..\..\..\..\Platform\HAL\UART\Vx\V1x\hal_uart_v_01_00_06.h)(0x69EEFF49)
+I (..\..\..\..\Platform\HAL\HPL\Include\hpl_nmi.h)(0x69EEFF43)
+F (..\..\..\..\Platform\HAL\WDT\hal_wdt.c)(0x69EEFF4A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_wdt.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\DAC\hal_dac.c)(0x69EEFF42)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_dac.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\RTC\hal_rtc.c)(0x69EEFF47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_rtc.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\LPUART\hal_lpuart.c)(0x69EEFF45)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_lpuart.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\USART\hal_usart.c)(0x69EEFF4A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_usart.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\LCD\hal_lcd.c)(0x69EEFF45)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_lcd.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\VREFBUF\hal_vrefbuf.c)(0x69EEFF4A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_vrefbuf.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\PWM\hal_pwm.c)(0x69EEFF47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_pwm.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\HAL\QSPI\hal_qspi.c)(0x69EEFF47)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/hal_qspi.o -MMD)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\Library\ABOV\Debug\Source\debug.c)(0x69EEFF4B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/debug.o -MMD)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug.h)(0x69EEFF4A)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_serial.h)(0x69EEFF4A)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_log.h)(0x69EEFF4A)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+F (..\..\..\..\Platform\Library\ABOV\Debug\Source\debug_cmd.c)(0x69EEFF4B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/debug_cmd.o -MMD)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug.h)(0x69EEFF4A)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_log.h)(0x69EEFF4A)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_cmd.h)(0x69EEFF4A)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_serial.h)(0x69EEFF4A)
+F (..\..\..\..\Platform\Library\ABOV\Debug\Source\debug_hardfault.c)(0x69EEFF4B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/debug_hardfault.o -MMD)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug.h)(0x69EEFF4A)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+F (..\..\..\..\Platform\Library\ABOV\Debug\Source\debug_log.c)(0x69EEFF4B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/debug_log.o -MMD)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug.h)(0x69EEFF4A)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_log.h)(0x69EEFF4A)
+F (..\..\..\..\Platform\Library\ABOV\Debug\Source\debug_retarget.c)(0x69EEFF4B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/debug_retarget.o -MMD)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug.h)(0x69EEFF4A)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_serial.h)(0x69EEFF4A)
+F (..\..\..\..\Platform\Library\ABOV\Debug\Source\debug_serial.c)(0x69EEFF4B)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/debug_serial.o -MMD)
+I (..\..\..\..\Framework\CMSIS\Core\Include\cmsis_compiler.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Core\Include\cmsis_armclang.h)(0x69EEFF3F)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug.h)(0x69EEFF4A)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_serial.h)(0x69EEFF4A)
+F (..\..\..\Source\TmplUserApp\DebugLibrary\debug_framework.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/debug_framework.o -MMD)
+I (..\..\..\Source\TmplUserApp\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+F (..\..\..\Source\TmplUserApp\Sht40\SHT40_app.c)(0x69EF1157)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/sht40_app.o -MMD)
+I (..\..\..\Source\TmplUserApp\Sht40\SHT40_app.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sht4x_i2c.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_config.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c_hal.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\..\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+F (..\..\..\Source\TmplUserApp\Sht40\sht4x_i2c.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/sht4x_i2c.o -MMD)
+I (..\..\..\Source\TmplUserApp\Sht40\sht4x_i2c.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_config.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_common.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c_hal.h)(0x69EEFF3E)
+F (..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c_hal.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/sensirion_i2c_hal.o -MMD)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c_hal.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_config.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_common.h)(0x69EEFF3E)
+I (..\..\..\..\ProductConfig\Config\abov_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\Framework\CMSIS\Core\Include\core_cm4.h)(0x69EEFF3F)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\config_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\abov_module_config.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\startup_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\debug_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\board_a34g43x.h)(0x69EEFF4B)
+I (..\..\..\..\ProductConfig\Config\..\A34G43x\Config\Board\bare.h)(0x69EEFF4B)
+I (..\..\..\..\Platform\HAL\Include\hal_i2c.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\Library\ABOV\Debug\Include\debug_log.h)(0x69EEFF4A)
+F (..\..\..\Source\TmplUserApp\Sht40\sensirion_common.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/sensirion_common.o -MMD)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_common.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_config.h)(0x69EEFF3E)
+F (..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/sensirion_i2c.o -MMD)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_config.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_common.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sht40\sensirion_i2c_hal.h)(0x69EEFF3E)
+F (..\..\..\Source\TmplUserApp\MP23ABS1\mp23abs1_sensor.c)(0x69EF1778)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/mp23abs1_sensor.o -MMD)
+I (..\..\..\Source\TmplUserApp\MP23ABS1\mp23abs1_sensor.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_adc.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+F (..\..\..\Source\TmplUserApp\BatteryReading\battery_reading.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/battery_reading.o -MMD)
+I (..\..\..\Source\TmplUserApp\BatteryReading\battery_reading.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_adc.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\Source\TmplUserApp\BatteryReading\..\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+F (..\..\..\Source\TmplUserApp\LISDE12TR\lis2de12.c)(0x69EEFF3E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/lis2de12.o -MMD)
+I (..\..\..\Source\TmplUserApp\LISDE12TR\lis2de12.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_i2c.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\Source\TmplUserApp\LISDE12TR\..\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+F (..\..\..\Source\TmplUserApp\LISDE12TR\LIS2DE12_app.c)(0x69EF11B7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/lis2de12_app.o -MMD)
+I (..\..\..\Source\TmplUserApp\LISDE12TR\LIS2DE12_app.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\LISDE12TR\lis2de12.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\LISDE12TR\..\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_i2c.h)(0x69EEFF45)
+F (..\..\..\Source\TmplUserApp\ESP32_AT_Test\ESP32_AT_Test.c)(0x69EF1238)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/esp32_at_test.o -MMD)
+I (..\..\..\Source\TmplUserApp\ESP32_AT_Test\ESP32_AT_Test.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+I (..\..\..\Source\TmplUserApp\ESP32_AT_Test\..\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+F (..\..\..\Source\TmplUserApp\MQTT_Library\mqtt_port_abov.c)(0x69EF0485)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/mqtt_port_abov.o -MMD)
+I (..\..\..\Source\TmplUserApp\MQTT_Library\mqtt_port.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_timer1.h)(0x69EEFF45)
+I (..\..\..\..\Framework\CMSIS\Device\ABOV\Include\system_a34xxxx.h)(0x69EEFF3F)
+F (..\..\..\Source\TmplUserApp\MQTT_Library\mqtt_core.c)(0x69EF046F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/mqtt_core.o -MMD)
+I (..\..\..\Source\TmplUserApp\MQTT_Library\mqtt_core.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\MQTT_Library\mqtt_port.h)(0x69EEFF3E)
+F (..\..\..\Source\TmplUserApp\MQTT_Library\EMPA_MqttAws.c)(0x69EF049A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/empa_mqttaws.o -MMD)
+I (..\..\..\Source\TmplUserApp\MQTT_Library\EMPA_MqttAws.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\MQTT_Library\mqtt_core.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\MQTT_Library\mqtt_port.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\MQTT_Library\..\Sensor\sensor.h)(0x69EEFF3E)
+F (..\..\..\Source\TmplUserApp\Sensor\sensor.c)(0x69EF1A49)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O1 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../Framework/CMSIS/Core/Include -I ../../../../Framework/CMSIS/Device/ABOV/Include -I ../../../../ProductConfig/Config -I ../../../../Platform/HAL/Include -I ../../../../Platform/HAL/HPL/Include -I ../../../../Platform/Library/ABOV/Debug/Include-IDevice/ARM/ARMCM4/Include-D__UVISION_VERSION="543" -DEXTRN_SUBFAMILY_A34G43x -DEXTRN_ABOV_MODULE_CONFIG-o ./objects/sensor.o -MMD)
+I (..\..\..\Source\TmplUserApp\Sensor\sensor.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sensor\..\DebugLibrary\debug_framework.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_uart.h)(0x69EEFF45)
+I (..\..\..\..\Platform\HAL\Include\hal_common.h)(0x69EEFF44)
+I (..\..\..\..\Platform\HAL\Include\hal_pcu.h)(0x69EEFF45)
+I (..\..\..\Source\TmplUserApp\Sensor\..\SHT40\SHT40_app.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sensor\..\SHT40\sht4x_i2c.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sensor\..\SHT40\sensirion_config.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sensor\..\SHT40\sensirion_i2c_hal.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sensor\..\BatteryReading\battery_reading.h)(0x69EEFF3E)
+I (..\..\..\..\Platform\HAL\Include\hal_adc.h)(0x69EEFF44)
+I (..\..\..\Source\TmplUserApp\Sensor\..\LISDE12TR\LIS2DE12_app.h)(0x69EEFF3E)
+I (..\..\..\Source\TmplUserApp\Sensor\..\MP23ABS1\mp23abs1_sensor.h)(0x69EEFF3E)

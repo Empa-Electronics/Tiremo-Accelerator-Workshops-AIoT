@@ -1,0 +1,4 @@
+/Users/mertyilmaz/CODEWORKS/WORKSHOPS/Tiremo-Accelerator-Workshops-AIoT/Activity2_EdgeAI_Solutions_and_Deployment/Projects/Project_DataCollector/AUDK32_A34xxxx-1.0.11/build/debug/CMakeFiles/tmpl_userapp.dir
+/Users/mertyilmaz/CODEWORKS/WORKSHOPS/Tiremo-Accelerator-Workshops-AIoT/Activity2_EdgeAI_Solutions_and_Deployment/Projects/Project_DataCollector/AUDK32_A34xxxx-1.0.11/build/debug/CMakeFiles/flash.dir
+/Users/mertyilmaz/CODEWORKS/WORKSHOPS/Tiremo-Accelerator-Workshops-AIoT/Activity2_EdgeAI_Solutions_and_Deployment/Projects/Project_DataCollector/AUDK32_A34xxxx-1.0.11/build/debug/CMakeFiles/edit_cache.dir
+/Users/mertyilmaz/CODEWORKS/WORKSHOPS/Tiremo-Accelerator-Workshops-AIoT/Activity2_EdgeAI_Solutions_and_Deployment/Projects/Project_DataCollector/AUDK32_A34xxxx-1.0.11/build/debug/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,50 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": { "major": 3, "minor": 20, "patch": 0 },
+
+    "configurePresets": [
+        {
+            "name": "debug",
+            "displayName": "Debug - ARM GCC",
+            "description": "A34G43x debug build (no optimisation, full symbols)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/debug",
+            "toolchainFile": "${sourceDir}/cmake/arm-none-eabi.cmake",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            }
+        },
+        {
+            "name": "release",
+            "displayName": "Release - ARM GCC",
+            "description": "A34G43x release build (O2, smaller binary)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/release",
+            "toolchainFile": "${sourceDir}/cmake/arm-none-eabi.cmake",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+            }
+        }
+    ],
+
+    "buildPresets": [
+        {
+            "name": "debug",
+            "displayName": "Build Debug",
+            "configurePreset": "debug"
+        },
+        {
+            "name": "release",
+            "displayName": "Build Release",
+            "configurePreset": "release"
+        },
+        {
+            "name": "flash-debug",
+            "displayName": "Flash Debug (OpenOCD)",
+            "configurePreset": "debug",
+            "targets": ["flash"]
+        }
+    ]
+}

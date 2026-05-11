@@ -21,7 +21,7 @@ Bir uygulama için geliştirilen yapay zeka çözümlerinin işletilmesi modern 
 ## Geliştirme Ortamı Kurulumu
 Aktivitelere başlamadan önce aşağıdaki ortak kurulum kılavuzunu takip ederek geliştirme ortamınızı hazırlayınız. Bu kılavuz her iki aktivite için geçerlidir ve yalnızca bir kez uygulanması yeterlidir.
 
-### ↳ [Geliştirme Ortamı Kurulumu — VS Code & ABOV A34G43x](SETUP_VSCODE.md)
+### ↳ [Geliştirme Ortamı Kurulumu — VS Code & ABOV A34G43x](Kurulum.md)
 VS Code, CMake, Ninja, ARM GCC Toolchain kurulumu ve proje derleme/yükleme adımlarını içerir.
 
 ---
@@ -41,7 +41,7 @@ Repository içerisindeki her bir "Activity" klasörü, etkinliğimizde yer alaca
 
 ```
 Workshop Repository
-├── SETUP_VSCODE.md                              ← Ortak geliştirme ortamı kurulum kılavuzu
+├── Kurulum.md                               ← Ortak geliştirme ortamı kurulum kılavuzu
 ├── Activity1_Sensor_Connectivity_and_MQTT/
 │   ├── Project_MQTT/
 │   │   └── AUDK32_A34xxxx-1.0.11/           ← ABOV A34G43x MCU firmware projesi
@@ -51,7 +51,14 @@ Workshop Repository
 │   └── Aktivite-1 Kılavuzu (README.md)
 │
 └── Activity2_EdgeAI_Solutions_and_Deployment/
-    ├── Kaynak Kod & Materyaller
+    ├── Projects/
+    │   ├── Project_DataCollector/             ← Veri toplama MCU firmware projesi
+    │   └── Project_EdgeAI/                    ← Edge-AI çıkarım MCU firmware projesi
+    ├── Datasets/                              ← Eğitim ve doğrulama veri setleri
+    ├── Models/  ← Eğitilmiş model dosyaları
+    ├── tiremo_api/                            ← Tiremo®Intelligence tarafından üretilen API dosyaları
+    ├── EdgeAI_Entegrasyon.md                  ← DataCollector → EdgeAI entegrasyon kılavuzu
+    ├── End-to-End-EdgeAI-Tiremo-Accelerator-Workshops.ipynb
     └── Aktivite-2 Kılavuzu (README.md)
 ```
 
@@ -59,18 +66,22 @@ Workshop Repository
 Etkinliğimizde kullanılacak çalışma ortamlarının kurulumları sonrası hazırladığımız checklist ile gereksinimlerin kontrolünü sağlayabilirsiniz.
 
 **Aktivite-1 Tiremo®Cortex ile Veri Toplama ve MQTT Haberleşmesi**
-- [ ] [SETUP_VSCODE.md](SETUP_VSCODE.md) kılavuzu tamamlandı (VS Code, CMake, Ninja, ARM GCC)
+- [ ] [Kurulum.md](Kurulum.md) kılavuzu tamamlandı (VS Code, CMake, Ninja, ARM GCC)
 - [ ] `Activity1_Sensor_Connectivity_and_MQTT/Project_MQTT/AUDK32_A34xxxx-1.0.11/` projesi VS Code'da açıldı ve başarıyla derlendi
 - [ ] Aktivite-1 Kaynak Dosyaları
 
 **Aktivite-2 Tiremo®Intelligence ile Uçta Yapay Zeka Çözümleri Geliştirme**
-- [ ] [SETUP_VSCODE.md](SETUP_VSCODE.md) kılavuzu tamamlandı (MCU'ya model yüklemek için gereklidir)
-- [ ] `Activity1_Sensor_Connectivity_and_MQTT/Project_MQTT/AUDK32_A34xxxx-1.0.11/` projesi VS Code'da açıldı ve başarıyla derlendi
-- [ ] Aktivite-2 Kaynak Dosyaları (Tiremo®Intelligence)
+- [ ] [Kurulum.md](Kurulum.md) kılavuzu tamamlandı (MCU'ya model yüklemek için gereklidir)
+- [ ] `Activity2_EdgeAI_Solutions_and_Deployment/Projects/Project_DataCollector/` projesi VS Code'da açıldı ve başarıyla derlendi.
+- [ ] Aktivite-2 Kaynak Dosyaları
 
 ## Güncellemeler
 Workshop etkinliğimizde gerekli çalışma ortamları üzerindeki güncellemeleri bu başlık altında takip edebilirsiniz.
 ```
+Versiyon-3: 11 Mayıs 2026
+- İstanbul Teknik Üniversitesi 13 Mayıs 2026 tarihli etkinlik için gerekli çalışma ortamları ve materyaller 'master' branch'ine eklendi.
+Versiyon-2: 28 Nisan 2026
+- Yıldız Teknik Üniversitesi 30 Nisan 2026 tarihli etkinlik için gerekli çalışma ortamları ve materyaller 'ytu-2026' branch'ine eklendi.
 Versiyon-1: 24 Nisan 2026  
 Tüm aktiviteler için temel bileşenleri içeren kılavuzlar repository içerisinde paylaşıldı.
 ```

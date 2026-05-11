@@ -1,0 +1,5 @@
+# add every possible DS_Store file to .gitignore
+DS_Store
+*/.DS_Store
+*.DS_Store
+__pycache__/
