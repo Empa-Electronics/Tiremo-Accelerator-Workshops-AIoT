@@ -1,3 +1,8 @@
+<p align="center">
+    <img src="./Additionals/Empa-Accelerator-Workshops-Template-Banner.png" alt="Tiremo® Accelerator Workshops" 
+    style="display: block; margin: 0 auto"/>
+</p>
+
 # ABOV A34G43x — Geliştirme Ortamı Kurulum Kılavuzu
 
 Bu kılavuzu okuyan kişi, sıfırdan geliştirme ortamını kurarak ABOV A34G43x mikrodenetleyicisine kod derleyip yükleyebilir hale gelecektir.
