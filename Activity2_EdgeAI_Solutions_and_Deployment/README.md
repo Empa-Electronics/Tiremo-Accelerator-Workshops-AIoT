@@ -11,7 +11,7 @@ Aktivite içeriği olan "El Hareketi Tanıma" uygulaması, Empa Electronics tara
 <img src="./Additionals/Hand-Characters.png" alt="El Hareketi Sınıfları" width="800"/>
 
 ## Aktivite
-### ↳ 1. [Tiremo®Cortex Platformunda Uçta Yapay Zeka Çözümleri: El Hareketi Tanıma (scikit-learn ile Random Forest ve emlearn ile Model Dönüşümü)](https://colab.research.google.com/drive/1bbg1bfcpoIIn0kcI18elS_EtdG5Iee-f)
+### ↳ 1. [Tiremo®Cortex Platformunda Uçta Yapay Zeka Çözümleri: El Hareketi Tanıma (scikit-learn ile Random Forest ve emlearn ile Model Dönüşümü)](https://colab.research.google.com/drive/10Wh3pKSrBgKI1WTCD0Kd0MeEX67dWb4c)
 Aktivite içeriği olan "El Hareketi Tanıma" uygulamasının scikit-learn kütüphanesi ile oluşturulmuş Random Forest modelinin **Google Colab** üzerinde geliştirilmesini ve Tiremo®Intelligence'a entegre edilmiş emlearn aracı ile uç birime taşınmasını konu alan uygulama adımlarını içerir.  
 ### ↳ 2. [Edge-AI Entegrasyonu: DataCollector → EdgeAI](./EdgeAI_Entegrasyon.md)
 Google Colab'da eğitilen modelin Tiremo®Cortex üzerinde çalışacak biçimde **Project_DataCollector** firmware projesine entegre edilmesini, ve EdgeAI projesini elde edene kadarki adımları konu alan uygulama kılavuzunu içerir.
