@@ -199,17 +199,7 @@ add_custom_command(TARGET ${TARGET_NAME} POST_BUILD
 )
 
 # ─── 'flash' target: OpenOCD ile cipe yukle ──────────────────────────────────
-# set(OPENOCD "${CMAKE_SOURCE_DIR}/Tool/OpenOCD/win32/openocd.win32.exe")
-# set(OPENOCD_SCRIPTS "${CMAKE_SOURCE_DIR}/Tool/OpenOCD/share/openocd/scripts")
-# Use system OpenOCD on macOS/Linux, bundled on Windows
-if(WIN32)
-    set(OPENOCD "${CMAKE_SOURCE_DIR}/Tool/OpenOCD/win32/openocd.win32.exe")
-elseif(APPLE)
-    set(OPENOCD "${CMAKE_SOURCE_DIR}/Tool/OpenOCD/linux/openocd.linux.exe")
-else()
-    set(OPENOCD "${CMAKE_SOURCE_DIR}/Tool/OpenOCD/linux/openocd.linux.exe")
-endif()
-# Always use bundled scripts (contains ABOV-specific target configs)
+set(OPENOCD "${CMAKE_SOURCE_DIR}/Tool/OpenOCD/win32/openocd.win32.exe")
 set(OPENOCD_SCRIPTS "${CMAKE_SOURCE_DIR}/Tool/OpenOCD/share/openocd/scripts")
 set(OPENOCD_CFG "${CMAKE_SOURCE_DIR}/openocd.cfg")
 
