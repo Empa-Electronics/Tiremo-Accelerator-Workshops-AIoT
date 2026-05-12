@@ -158,22 +158,55 @@ arm-none-eabi-gcc --version
 
 Üçü de versiyon bilgisi döndürüyorsa kurulum tamamdır.
 
-> **Hata alırsanız:** PowerShell'i kapatıp yeniden açın. Hâlâ hata alırsanız aşağıdaki PowerShell komutunu çalıştırarak üç aracı da kullanıcı PATH'ine kalıcı olarak ekleyin:
+> **Hata alırsanız:** PowerShell'i kapatıp yeniden açın. Hâlâ hata alırsanız aşağıdaki PowerShell komutunu çalıştırın. Komut, araçları kurulu oldukları yerde otomatik arayıp bulur ve kullanıcı PATH'ine ekler:
 
 ```powershell
-$cmakePath = "C:\Program Files\CMake\bin"
-$ninjaPath  = (Get-ChildItem "$env:LOCALAPPDATA\Microsoft\WinGet\Packages" -Filter "ninja.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).DirectoryName
-$armPath    = (Get-ChildItem "C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi" -Filter "arm-none-eabi-gcc.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).DirectoryName
-
-$current = [System.Environment]::GetEnvironmentVariable("PATH", "User")
-$toAdd = @($cmakePath, $ninjaPath, $armPath) | Where-Object { $_ -and $current -notlike "*$_*" }
-if ($toAdd.Count -gt 0) {
-    [System.Environment]::SetEnvironmentVariable("PATH", $current + ";" + ($toAdd -join ";"), "User")
-    Write-Host "PATH guncellendi. Yeni bir PowerShell penceresi acin."
+@(
+    (Get-ChildItem "$env:ProgramFiles", "${env:ProgramFiles(x86)}" -Filter "cmake.exe"      -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).DirectoryName,
+    (Get-ChildItem "$env:ProgramFiles", "${env:ProgramFiles(x86)}",
+                  "$env:LOCALAPPDATA\Microsoft\WinGet\Packages",
+                  "$env:LOCALAPPDATA\Programs" -Filter "ninja.exe"              -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).DirectoryName,
+    (Get-ChildItem "$env:ProgramFiles", "${env:ProgramFiles(x86)}" -Filter "arm-none-eabi-gcc.exe" -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1).DirectoryName
+) | Where-Object { $_ } | ForEach-Object {
+    $p = [System.Environment]::GetEnvironmentVariable("PATH", "User")
+    if ($p -notlike "*$_*") {
+        [System.Environment]::SetEnvironmentVariable("PATH", "$p;$_", "User")
+        Write-Host "Eklendi: $_"
+    } else {
+        Write-Host "Zaten mevcut: $_"
+    }
 }
+Write-Host "Tamamlandi. Yeni bir PowerShell penceresi acin."
 ```
 
 Komutu çalıştırdıktan sonra **yeni bir PowerShell penceresi açın** ve tekrar doğrulayın.
+
+### Araçlar bulundu fakat yine de tanınmıyorsa — Kalıcı Çözüm
+
+Araçların PATH'e eklenmiş olmasına rağmen her yeni terminal açıldığında `cmake` / `ninja` / `arm-none-eabi-gcc` tanınmıyorsa, Windows'un kullanıcı PATH değişikliklerini mevcut oturumlara yansıtmaması nedeniyle oluşan bir VS Code terminal sorunudur.
+
+**Adım 1 — Mevcut terminalde hemen aktif et:**
+
+```powershell
+$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH","User")
+```
+
+Bu komut yalnızca açık terminale etki eder. Kalıcı çözüm için Adım 2'ye geçin.
+
+**Adım 2 — Kalıcı düzeltme (her yeni terminalde otomatik çalışır):**
+
+```powershell
+if (!(Test-Path $PROFILE)) { New-Item -ItemType File -Path $PROFILE -Force | Out-Null }
+$line = '$env:PATH = [System.Environment]::GetEnvironmentVariable("PATH","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("PATH","User")'
+if (!(Get-Content $PROFILE -ErrorAction SilentlyContinue | Select-String -SimpleMatch 'GetEnvironmentVariable')) {
+    Add-Content $PROFILE $line
+    Write-Host "Profil guncellendi: $PROFILE"
+} else {
+    Write-Host "Zaten mevcut."
+}
+```
+
+Bu komut, PowerShell profil dosyasına PATH yenileme satırı ekler. Bundan sonra VS Code'da her yeni terminal açıldığında araçlar otomatik olarak tanınır.
 
 ---
 
@@ -330,7 +363,7 @@ cmake --preset debug
 `build/` klasörünü silip yeniden yapılandırmak yeterlidir, kaynak dosyalara dokunulmaz.
 
 ### `arm-none-eabi-gcc` bulunamıyor
-Toolchain kurulumunda **"Add to PATH"** seçeneği işaretlenmemiştir. Kurulum klasörünü (örn. `C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\14.2 rel1\bin`) PATH'e manuel ekleyin veya Bölüm 6'daki scripti kullanın.
+Toolchain kurulumunda **"Add to PATH"** seçeneği işaretlenmemiştir. Bölüm 6'daki PowerShell komutunu çalıştırarak otomatik olarak ekleyin.
 
 ### `ninja: no work to do`
 Kaynak dosyalar değişmemiştir. Normaldir, önceki derleme hâlâ geçerlidir.
