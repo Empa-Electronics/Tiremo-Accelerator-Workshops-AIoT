@@ -29,11 +29,12 @@
 #define ADC_RESOLUTION          4096    /* 12-bit ADC resolution */
 #define ADC_OFFSET              1705    /* ADC center offset (measured from microphone) */
 #define SIGNAL_GAIN             8       /* Additional gain multiplier (1-16) */
-#define ENABLE_RAW_ADC_DEBUG    1       /* Set to 1 to print raw ADC values (DEBUG MODE) */
+#define ENABLE_RAW_ADC_DEBUG    0       /* Set to 1 to print raw ADC values (DEBUG MODE) */
 
 /* Private variables ---------------------------------------------------------*/
 static MP23ABS1_Context_t MP23ABS1_Context = {0};
 static volatile bool bSampleReady = false;
+static uint8_t s_debugFirstSample = 1;
 
 /* Private function prototypes -----------------------------------------------*/
 static int32_t MP23ABS1_GPIO_Init(void);
@@ -142,6 +143,7 @@ int32_t MP23ABS1_StartRecording(void)
     {
         MP23ABS1_Context.WriteIndex = 0;
         MP23ABS1_Context.SampleCount = 0;
+        s_debugFirstSample = 1;
     }
     
     /* Update state */
@@ -328,7 +330,6 @@ void MP23ABS1_TimerHandler(void)
     {
         tAdcData.bReadDDR = false;
         eErr = HAL_ADC_GetData(MP23ABS1_ADC_ID, 0, &tAdcData);
-        
         if (eErr == HAL_ERR_OK)
         {
             un16AdcValue = tAdcData.un16Result;
@@ -399,15 +400,21 @@ static void MP23ABS1_ProcessSample(uint16_t un16AdcValue)
 {
     int16_t filteredSample;
     
-    /* Debug: Print raw ADC values continuously (one per line) */
+    /* Debug: Print raw ADC values continuously (comma-separated, no trailing comma) */
     #if ENABLE_RAW_ADC_DEBUG
     extern void DebugFramework_PutDec32(uint32_t val);
     extern void DebugFramework_Puts(const char *str);
-    
+    extern void DebugFramework_PutsLine(const char *str);
+    if (!s_debugFirstSample) {
+        DebugFramework_Puts(",");
+    }
+    if (s_debugFirstSample) {
+        DebugFramework_Puts("Microphone ADC Value:");
+    }
+    s_debugFirstSample = 0;
     DebugFramework_PutDec32(un16AdcValue);
-    DebugFramework_Puts("\n\r");
     #endif
-    
+
     /* Apply high-pass filter to remove DC offset */
     filteredSample = MP23ABS1_ApplyHPFilter((int32_t)un16AdcValue, &MP23ABS1_Context.HPFilter);
     

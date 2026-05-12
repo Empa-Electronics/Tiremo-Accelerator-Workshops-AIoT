@@ -55,10 +55,8 @@ uint8_t SHT40_Init(void)
     
     if (error == 0) {
         sensor_initialized = 1;
-        DebugFramework_Printf("SHT40 initialized successfully (S/N: 0x%08X)\n\r", (unsigned int)sht40_serialnumber);
     } else {
         sensor_initialized = 0;
-        DebugFramework_PutsLine("SHT40 initialization FAILED!\n\r");
     }
     
     return (uint8_t)error;

@@ -56,8 +56,6 @@ static void delay_ms_approx(uint32_t ms)
  */
 uint8_t LIS2DE12_Init(void)
 {
-    DebugFramework_PutsLine("\n\rInitializing LIS2DE12 Accelerometer...\n\r");
-
     uint8_t whoami = 0;
     int32_t error = 0;
 
@@ -145,9 +143,6 @@ uint8_t LIS2DE12_Init(void)
                                   ctrl1_desired, ctrl1_readback, attempt);
             delay_ms_approx(10);
         }
-
-        DebugFramework_Printf("CTRL_REG1 = 0x%02X (Expected: 0x5F)\n\r", ctrl1_readback);
-
         if (!ok) {
             DebugFramework_PutsLine("[ERR] Cannot set CTRL_REG1!\n\r");
             return 7;
@@ -167,8 +162,6 @@ uint8_t LIS2DE12_Init(void)
     }
 
     sensor_initialized = 1;
-    DebugFramework_Printf("LIS2DE12 initialized OK (ID: 0x%02X)\n\r", lis2de12_device_id);
-
     return 0;
 }
 

@@ -35,9 +35,10 @@ typedef enum {
 /* ---- GPIO pin identifiers (logical) ------------------------------------ */
 
 typedef enum {
-    MQTT_GPIO_LED_CONNECTED = 0,
-    MQTT_GPIO_LED_TX,
-    MQTT_GPIO_LED_RX,
+    MQTT_GPIO_LED_WIFI      = 0,   /* LED6 (PB12) - WiFi connected */
+    MQTT_GPIO_LED_CONNECTED,       /* LED7 (PB13) - MQTT connected */
+    MQTT_GPIO_LED_TX,              /* LED5 (PB11) - TX blink */
+    MQTT_GPIO_LED_RX,              /* LED8 (PB14) - RX blink */
     MQTT_GPIO_PIN_MAX
 } MqttPort_GpioPin;
 

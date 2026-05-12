@@ -10,7 +10,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
-#include "../DebugLibrary/debug_framework.h"
 
 /* ---- Port singleton --------------------------------------------------- */
 
@@ -99,7 +98,6 @@ static FUNC_StatusTypeDef port_status_to_func(MqttPort_Status s)
 MqttPort_Status Wifi_SendCommand(const char *cmd)
 {
     if (g_port == NULL || g_port->uart_transmit == NULL) {
-        DebugFramework_Printf("[ERR] g_port is NULL! MqttPort_ABOV_Init() not called!\r\n");
         return MQTT_PORT_ERROR;
     }
     return g_port->uart_transmit((const uint8_t *)cmd, (uint16_t)strlen(cmd), 300);
@@ -182,15 +180,10 @@ FUNC_StatusTypeDef Wifi_Reset2(char *buffer, MQTT_DataRecvModeTypeDef mode)
     MqttPort_Status checkRcv;
     WIFI_RespMsgTypeDef checkResp;
 
-    DebugFramework_Printf("[RST] Sending AT+RST...\r\n");
     checkCmd = Wifi_SendCommand("AT+RST\r\n");
-    DebugFramework_Printf("[RST] SendCmd result=%d\r\n", (int)checkCmd);
 
     if (checkCmd == MQTT_PORT_OK) {
-        DebugFramework_Printf("[RST] Waiting for ESP32 response (4000ms)...\r\n");
         checkRcv = Wifi_Receive(buffer, WIFI_FUNCS_STD_BUFF_SIZE, 4000, mode);
-        DebugFramework_Printf("[RST] Receive1 result=%d\r\n", (int)checkRcv);
-        DebugFramework_Printf("[RST] buf='%.40s'\r\n", buffer);
 
         if (checkRcv == MQTT_PORT_OK || checkRcv == MQTT_PORT_TIMEOUT) {
             /* Accept either "OK" or "ready" as success.
@@ -198,25 +191,19 @@ FUNC_StatusTypeDef Wifi_Reset2(char *buffer, MQTT_DataRecvModeTypeDef mode)
              * Depending on timing we may catch only one of them.
              * Use strstr directly because line endings may vary (\r\n vs \n). */
             if (strstr(buffer, "OK") != NULL || strstr(buffer, "ready") != NULL) {
-                DebugFramework_Printf("[RST] Reset OK (found OK or ready)\r\n");
                 return FUNC_OK;
             } else {
-                DebugFramework_Printf("[RST] No OK/ready in buffer, retrying...\r\n");
                 /* Try a second receive - maybe "ready" comes later */
                 checkRcv = Wifi_Receive(buffer, WIFI_FUNCS_STD_BUFF_SIZE, 4000, mode);
-                DebugFramework_Printf("[RST] Receive2 result=%d buf='%.40s'\r\n", (int)checkRcv, buffer);
                 if (strstr(buffer, "OK") != NULL || strstr(buffer, "ready") != NULL) {
-                    DebugFramework_Printf("[RST] Reset OK on second receive\r\n");
                     return FUNC_OK;
                 }
                 return FUNC_TIMEOUT;
             }
         } else {
-            DebugFramework_Printf("[RST] Receive port error=%d\r\n", (int)checkRcv);
             return port_status_to_func(checkRcv);
         }
     } else {
-        DebugFramework_Printf("[RST] TX FAILED! Cannot send AT+RST\r\n");
         return FUNC_TX_ERROR;
     }
 
@@ -826,10 +813,22 @@ MQTT_InitTypeDef MQTTInitCase = MQTT_INIT_STATE_WIFI_RESET;
 
 FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
 {
-    DebugFramework_Printf("[MQTT] STATE: MQTT_INIT\r\n");
     uint8_t mqttConnTryCount = 0;
     uint8_t stateRetry = 0;
     s_broker_address = config->brokerAddress;
+
+    /* Fast-path: if already connected to MQTT broker, skip full reset/init */
+    {
+        char fastBuf[200] = {0};
+        if (Wifi_GetMqttConn2(fastBuf, POLLING_MODE) == FUNC_OK && fastBuf[26] == '4') {
+            flag_mqtt_connect = 1;
+            flag_mqtt_init_done = 1;
+            mqtt_timer_en = 0;
+            LED_WifiConnected(1);
+            return FUNC_SUCCESSFUL;
+        }
+    }
+
     MQTTInitCase = MQTT_INIT_STATE_WIFI_RESET;
 
     while (MQTTInitCase != MQTT_INIT_STATE_END_CASE) {
@@ -837,22 +836,18 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
 
         switch (MQTTInitCase) {
         case MQTT_INIT_STATE_WIFI_RESET:
-            DebugFramework_Printf("[MQTT] STATE: WIFI_RESET (attempt %d)\r\n", stateRetry + 1);
             mqtt_timer_en = 1;
             flag_mqtt_error = 0;
 
             checkFunc = Wifi_Reset2((char *)config->mqttPacketBuffer, POLLING_MODE);
 
             if (checkFunc == FUNC_OK) {
-                DebugFramework_Printf("[MQTT] WiFi reset OK\r\n");
                 stateRetry = 0;
                 mqtt_timer = 0;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_MODE;
             } else {
                 stateRetry++;
-                DebugFramework_Printf("[MQTT] WiFi reset FAILED (attempt %d) errCode=%d\r\n", stateRetry, (int)checkFunc);
                 if (stateRetry >= 5) {
-                    DebugFramework_Printf("[MQTT] WiFi reset max retries, going TIMEOUT\r\n");
                     stateRetry = 0;
                     mqttErrorData.errorCode = MQTT_INIT_ERROR_WIFI_RESET;
                     MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
@@ -861,7 +856,6 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             }
 
             if (mqtt_timer > 20) {
-                DebugFramework_Printf("[MQTT] WiFi reset TIMEOUT (timer expired)\r\n");
                 mqtt_timer = 0;
                 stateRetry = 0;
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_WIFI_RESET;
@@ -870,29 +864,23 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_WIFI_MODE:
-            DebugFramework_Printf("[MQTT] STATE: WIFI_MODE (STATION)\r\n");
             checkFunc = Wifi_SetWifiMode2((char *)config->mqttPacketBuffer, STATION_MODE, POLLING_MODE);
 
             if (checkFunc == FUNC_OK) {
-                DebugFramework_Printf("[MQTT] WiFi mode set OK\r\n");
                 mqtt_timer = 0;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SMARTCONFIG;
             } else if (checkFunc == FUNC_TX_ERROR) {
-                DebugFramework_Printf("[MQTT] WiFi mode FAILED: TX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TX;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_MODE;
             } else if (checkFunc == FUNC_RX_ERROR) {
-                DebugFramework_Printf("[MQTT] WiFi mode FAILED: RX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_RX;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_MODE;
             } else if (checkFunc == FUNC_TIMEOUT) {
-                DebugFramework_Printf("[MQTT] WiFi mode FAILED: TIMEOUT\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TIMEOUT;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_MODE;
             }
 
             if (mqtt_timer > 20) {
-                DebugFramework_Printf("[MQTT] WiFi mode TIMEOUT (timer expired)\r\n");
                 mqtt_timer = 0;
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_WIFI_MODE;
                 MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
@@ -900,7 +888,6 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_WIFI_SMARTCONFIG:
-            DebugFramework_Printf("[MQTT] STATE: WIFI_SMARTCONFIG (OSC_enable=%d)\r\n", config->OSC_enable);
             if (config->OSC_enable == 1) {
                 if (g_port->timer_start() != MQTT_PORT_OK) {
                     /* Timer start failed - skip to next state or handle error */
@@ -915,11 +902,9 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
                         Wifi_Receive((char *)config->mqttPacketBuffer, 200, 5000, POLLING_MODE);
 
                         if (Wifi_CheckResponse((char *)config->mqttPacketBuffer, "Smart get wifi info") == RESP_MSG_OK) {
-                            DebugFramework_Printf("[MQTT] SmartConfig: got WiFi info\r\n");
                             mqtt_timer = 0;
                             parse_wifi_info((char *)config->mqttPacketBuffer, mqtt_osc_ssid, mqtt_osc_password);
                         } else if (Wifi_CheckResponse((char *)config->mqttPacketBuffer, "smartconfig connected wifi") == RESP_MSG_OK) {
-                            DebugFramework_Printf("[MQTT] SmartConfig: connected to WiFi\r\n");
                             mqtt_timer = 0;
                             g_port->delay_ms(1000);
 
@@ -927,7 +912,6 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
                                 checkFunc = Wifi_StopSmartConfig2((char *)config->mqttPacketBuffer, POLLING_MODE);
 
                                 if (checkFunc == FUNC_OK) {
-                                    DebugFramework_Printf("[MQTT] SmartConfig stopped OK\r\n");
                                     mqtt_timer = 0;
                                     MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_TIME;
                                     break;
@@ -948,7 +932,6 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
                     g_port->timer_stop();
 
                     if (MQTTInitCase != MQTT_INIT_STATE_WIFI_SET_TIME) {
-                        DebugFramework_Printf("[MQTT] SmartConfig TIMEOUT\r\n");
                         MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
                     }
                 } else if (checkFunc == FUNC_TX_ERROR) {
@@ -962,7 +945,6 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
                     MQTTInitCase = MQTT_INIT_STATE_WIFI_SMARTCONFIG;
                 }
             } else {
-                DebugFramework_Printf("[MQTT] SmartConfig disabled, skipping to DISC_AP\r\n");
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_DISC_AP;
             }
 
@@ -974,29 +956,23 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_WIFI_DISC_AP:
-            DebugFramework_Printf("[MQTT] STATE: WIFI_DISC_AP (disconnect current AP)\r\n");
             checkFunc = Wifi_QAP2((char *)config->mqttPacketBuffer, POLLING_MODE);
 
             if (checkFunc == FUNC_OK) {
-                DebugFramework_Printf("[MQTT] Disconnect AP OK\r\n");
                 mqtt_timer = 0;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_AP;
             } else if (checkFunc == FUNC_TX_ERROR) {
-                DebugFramework_Printf("[MQTT] Disconnect AP FAILED: TX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TX;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_DISC_AP;
             } else if (checkFunc == FUNC_RX_ERROR) {
-                DebugFramework_Printf("[MQTT] Disconnect AP FAILED: RX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_RX;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_DISC_AP;
             } else if (checkFunc == FUNC_TIMEOUT) {
-                DebugFramework_Printf("[MQTT] Disconnect AP FAILED: TIMEOUT\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TIMEOUT;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_DISC_AP;
             }
 
             if (mqtt_timer > 20) {
-                DebugFramework_Printf("[MQTT] Disconnect AP TIMEOUT (timer expired)\r\n");
                 mqtt_timer = 0;
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_WIFI_DISC_AP;
                 MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
@@ -1004,29 +980,24 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_WIFI_SET_AP:
-            DebugFramework_Printf("[MQTT] STATE: WIFI_SET_AP (SSID: %s)\r\n", config->wifiID);
             checkFunc = Wifi_SetAP2((char *)config->mqttPacketBuffer, config->wifiID, config->wifiPassword, POLLING_MODE);
 
             if (checkFunc == FUNC_OK) {
-                DebugFramework_Printf("[MQTT] WiFi connected to AP OK\r\n");
                 mqtt_timer = 0;
+                LED_WifiConnected(1);
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_TIME;
             } else if (checkFunc == FUNC_TX_ERROR) {
-                DebugFramework_Printf("[MQTT] WiFi connect AP FAILED: TX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TX;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_AP;
             } else if (checkFunc == FUNC_RX_ERROR) {
-                DebugFramework_Printf("[MQTT] WiFi connect AP FAILED: RX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_RX;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_AP;
             } else if (checkFunc == FUNC_TIMEOUT) {
-                DebugFramework_Printf("[MQTT] WiFi connect AP FAILED: TIMEOUT\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TIMEOUT;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_AP;
             }
 
             if (mqtt_timer > 20) {
-                DebugFramework_Printf("[MQTT] WiFi connect AP TIMEOUT (timer expired)\r\n");
                 mqtt_timer = 0;
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_WIFI_SET_AP;
                 MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
@@ -1034,29 +1005,23 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_WIFI_SET_TIME:
-            DebugFramework_Printf("[MQTT] STATE: WIFI_SET_TIME (timezone: %d)\r\n", config->timezone);
             checkFunc = Wifi_SetTime2((char *)config->mqttPacketBuffer, config->timezone, POLLING_MODE);
 
             if (checkFunc == FUNC_OK) {
-                DebugFramework_Printf("[MQTT] NTP time config OK\r\n");
                 mqtt_timer = 0;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_USER_CONFIG;
             } else if (checkFunc == FUNC_TX_ERROR) {
-                DebugFramework_Printf("[MQTT] NTP config FAILED: TX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TX;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_TIME;
             } else if (checkFunc == FUNC_RX_ERROR) {
-                DebugFramework_Printf("[MQTT] NTP config FAILED: RX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_RX;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_TIME;
             } else if (checkFunc == FUNC_TIMEOUT) {
-                DebugFramework_Printf("[MQTT] NTP config FAILED: TIMEOUT\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TIMEOUT;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_SET_TIME;
             }
 
             if (mqtt_timer > 20) {
-                DebugFramework_Printf("[MQTT] NTP config TIMEOUT (timer expired)\r\n");
                 mqtt_timer = 0;
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_WIFI_SET_TIME;
                 MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
@@ -1064,30 +1029,24 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_MQTT_USER_CONFIG:
-            DebugFramework_Printf("[MQTT] STATE: MQTT_USER_CONFIG (user: %s)\r\n", config->username);
             checkFunc = Wifi_MqttUserConfig2((char *)config->mqttPacketBuffer, config->mode_mqtt,
                                              config->clientID, config->username, config->mqttPassword, POLLING_MODE);
 
             if (checkFunc == FUNC_OK) {
-                DebugFramework_Printf("[MQTT] MQTT user config OK\r\n");
                 mqtt_timer = 0;
                 flag_mqtt_init_done = 1;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_CONN;
             } else if (checkFunc == FUNC_TX_ERROR) {
-                DebugFramework_Printf("[MQTT] MQTT user config FAILED: TX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TX;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_USER_CONFIG;
             } else if (checkFunc == FUNC_RX_ERROR) {
-                DebugFramework_Printf("[MQTT] MQTT user config FAILED: RX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_RX;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_USER_CONFIG;
             } else if (checkFunc == FUNC_TIMEOUT) {
-                DebugFramework_Printf("[MQTT] MQTT user config FAILED: TIMEOUT\r\n");
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_USER_CONFIG;
             }
 
             if (mqtt_timer > 20) {
-                DebugFramework_Printf("[MQTT] MQTT user config TIMEOUT (timer expired)\r\n");
                 mqtt_timer = 0;
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_MQTT_USER_CONFIG;
                 MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
@@ -1095,30 +1054,24 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_MQTT_CONN_CONFIG:
-            DebugFramework_Printf("[MQTT] STATE: MQTT_CONN_CONFIG\r\n");
             checkFunc = Wifi_MqttConnConfig2((char *)config->mqttPacketBuffer, config->keepAlive,
                                              config->cleanSession, config->qos, config->retain, POLLING_MODE);
 
             if (checkFunc == FUNC_OK) {
-                DebugFramework_Printf("[MQTT] MQTT conn config OK\r\n");
                 mqtt_timer = 0;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_CONN;
             } else if (checkFunc == FUNC_TX_ERROR) {
-                DebugFramework_Printf("[MQTT] MQTT conn config FAILED: TX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TX;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_CONN_CONFIG;
             } else if (checkFunc == FUNC_RX_ERROR) {
-                DebugFramework_Printf("[MQTT] MQTT conn config FAILED: RX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_RX;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_CONN_CONFIG;
             } else if (checkFunc == FUNC_TIMEOUT) {
-                DebugFramework_Printf("[MQTT] MQTT conn config FAILED: TIMEOUT\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TIMEOUT;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_CONN_CONFIG;
             }
 
             if (mqtt_timer > 20) {
-                DebugFramework_Printf("[MQTT] MQTT conn config TIMEOUT (timer expired)\r\n");
                 mqtt_timer = 0;
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_MQTT_CONN_CONFIG;
                 MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
@@ -1126,17 +1079,14 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_MQTT_CONN:
-            DebugFramework_Printf("[MQTT] STATE: MQTT_CONN (broker: %s)\r\n", config->brokerAddress);
             checkFunc = Wifi_MqttConn2((char *)config->mqttPacketBuffer, config->brokerAddress,
                                        config->reconnect, POLLING_MODE);
 
             if (checkFunc == FUNC_OK) {
-                DebugFramework_Printf("[MQTT] MQTT connect cmd OK, waiting for status 4...\r\n");
                 while (MQTTInitCase == MQTT_INIT_STATE_MQTT_CONN) {
                     checkFunc = Wifi_GetMqttConn2((char *)config->mqttPacketBuffer, POLLING_MODE);
 
                     if (checkFunc == FUNC_OK && config->mqttPacketBuffer[26] == '4') {
-                        DebugFramework_Printf("[MQTT] *** CONNECTED TO BROKER! ***\r\n");
                         mqtt_timer = 0;
                         mqtt_timer_en = 0;
                         flag_mqtt_connect = 1;
@@ -1145,27 +1095,22 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
                         MQTTSubInitCase = MQTT_SUB_INIT;
                         return FUNC_SUCCESSFUL;
                     } else if (mqtt_timer > 200) {
-                        DebugFramework_Printf("[MQTT] Waiting for broker status TIMEOUT\r\n");
                         mqtt_timer = 0;
                         MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
                     }
                 }
             } else if (checkFunc == FUNC_TX_ERROR) {
-                DebugFramework_Printf("[MQTT] MQTT connect FAILED: TX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TX;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_CONN;
             } else if (checkFunc == FUNC_RX_ERROR) {
-                DebugFramework_Printf("[MQTT] MQTT connect FAILED: RX_ERROR\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_RX;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_CONN;
             } else if (checkFunc == FUNC_TIMEOUT) {
-                DebugFramework_Printf("[MQTT] MQTT connect FAILED: TIMEOUT\r\n");
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_FUNC_TIMEOUT;
                 MQTTInitCase = MQTT_INIT_STATE_MQTT_CONN;
             }
 
             if (mqtt_timer > 100) {
-                DebugFramework_Printf("[MQTT] MQTT connect TIMEOUT (timer expired)\r\n");
                 mqtt_timer = 0;
                 mqttErrorData.errorCode = MQTT_INIT_ERROR_MQTT_CONN_FAIL;
                 MQTTInitCase = MQTT_INIT_STATE_TIMEOUT;
@@ -1173,7 +1118,6 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             break;
 
         case MQTT_INIT_STATE_TIMEOUT:
-            DebugFramework_Printf("[MQTT] STATE: TIMEOUT (try %d/%d)\r\n", mqttConnTryCount + 1, MQTT_CONN_MAX_TRY);
             while (mqttConnTryCount < MQTT_CONN_MAX_TRY) {
                 mqttConnTryCount++;
                 MQTTInitCase = MQTT_INIT_STATE_WIFI_RESET;
@@ -1181,7 +1125,6 @@ FUNC_InitTypeDef MQTT_Init(MQTT_Config *config)
             }
 
             if (mqttConnTryCount == MQTT_CONN_MAX_TRY) {
-                DebugFramework_Printf("[MQTT] Max retries reached, INIT FAILED\r\n");
                 mqtt_timer_en = 0;
                 flag_mqtt_error = FUNC_ERROR;
                 mqttConnTryCount = 0;
@@ -1263,6 +1206,8 @@ void UART_MqttPacketParser(MQTT_MsgDataTypeDef *messageData, const char *dataPac
         flag_mqtt_error = 0;
     } else if (strstr(dataPacket, MQTTDISCONNECTED) != NULL) {
         flag_mqtt_connect = 0;
+        LED_WifiConnected(0);
+        LED_Mqttconnected(0);
     }
 }
 
@@ -1434,18 +1379,23 @@ void Wifi_WaitMqttData(void)
 void LED_MqttTXBlink(void)
 {
     g_port->gpio_write(MQTT_GPIO_LED_TX, MQTT_GPIO_HIGH);
-    g_port->delay_ms(300);
+    g_port->delay_ms(50);
     g_port->gpio_write(MQTT_GPIO_LED_TX, MQTT_GPIO_LOW);
 }
 
 void LED_MqttRXBlink(void)
 {
     g_port->gpio_write(MQTT_GPIO_LED_RX, MQTT_GPIO_HIGH);
-    g_port->delay_ms(300);
+    g_port->delay_ms(50);
     g_port->gpio_write(MQTT_GPIO_LED_RX, MQTT_GPIO_LOW);
 }
 
 void LED_Mqttconnected(uint8_t set_led)
 {
     g_port->gpio_write(MQTT_GPIO_LED_CONNECTED, set_led ? MQTT_GPIO_HIGH : MQTT_GPIO_LOW);
+}
+
+void LED_WifiConnected(uint8_t set_led)
+{
+    g_port->gpio_write(MQTT_GPIO_LED_WIFI, set_led ? MQTT_GPIO_HIGH : MQTT_GPIO_LOW);
 }

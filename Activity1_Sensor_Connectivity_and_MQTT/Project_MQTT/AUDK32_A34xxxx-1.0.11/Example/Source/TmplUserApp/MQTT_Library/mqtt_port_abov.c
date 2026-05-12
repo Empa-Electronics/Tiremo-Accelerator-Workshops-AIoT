@@ -23,7 +23,6 @@
  */
 
 #include "mqtt_port.h"
-#include "../DebugLibrary/debug_framework.h"
 
 /* ---- ABOV HAL includes ------------------------------------------------ */
 #include "hal_uart.h"
@@ -47,9 +46,10 @@ typedef struct {
 } AbovGpioMapping;
 
 static const AbovGpioMapping gpio_map[MQTT_GPIO_PIN_MAX] = {
-    [MQTT_GPIO_LED_CONNECTED] = { PCU_ID_B, PCU_PIN_ID_13 },
-    [MQTT_GPIO_LED_TX]        = { PCU_ID_B, PCU_PIN_ID_14 },
-    [MQTT_GPIO_LED_RX]        = { PCU_ID_B, PCU_PIN_ID_15 },
+    [MQTT_GPIO_LED_WIFI]      = { PCU_ID_B, PCU_PIN_ID_12 },  /* LED6 - WiFi connected */
+    [MQTT_GPIO_LED_CONNECTED] = { PCU_ID_B, PCU_PIN_ID_13 },  /* LED7 - MQTT connected */
+    [MQTT_GPIO_LED_TX]        = { PCU_ID_B, PCU_PIN_ID_11 },  /* LED5 - TX blink */
+    [MQTT_GPIO_LED_RX]        = { PCU_ID_B, PCU_PIN_ID_14 },  /* LED8 - RX blink */
 };
 
 /* ---- Internal: simple tick counter for timeout (driven by SysTick) ---- */
@@ -71,9 +71,7 @@ static MqttPort_Status abov_uart_transmit(const uint8_t *data, uint16_t len, uin
 {
     (void)timeout;
 
-    DebugFramework_Printf("[TX] HAL_UART_Transmit UART_ID=%d len=%d...\r\n", (int)MQTT_UART_ID, (int)len);
     HAL_ERR_e status = HAL_UART_Transmit(MQTT_UART_ID, (uint8_t *)data, (uint32_t)len, true);
-    DebugFramework_Printf("[TX] done status=%d\r\n", (int)status);
 
     switch (status) {
         case HAL_ERR_OK:      return MQTT_PORT_OK;
@@ -177,8 +175,9 @@ static MqttPort_Status abov_timer_stop(void)
 static void abov_gpio_write(MqttPort_GpioPin pin, MqttPort_GpioState state)
 {
     if (pin < MQTT_GPIO_PIN_MAX) {
-        PCU_PORT_e output = (state == MQTT_GPIO_HIGH) ? PCU_PORT_HIGH : PCU_PORT_LOW;
-        HAL_PCU_SetOutputValue(gpio_map[pin].port, gpio_map[pin].pin, output);
+        /* LEDs are active-low: HIGH request = pin CLEAR (on), LOW request = pin SET (off) */
+        PCU_OUTPUT_BIT_e bit = (state == MQTT_GPIO_HIGH) ? PCU_OUTPUT_BIT_CLEAR : PCU_OUTPUT_BIT_SET;
+        HAL_PCU_SetOutputBit(gpio_map[pin].port, gpio_map[pin].pin, bit);
     }
 }
 

@@ -339,6 +339,7 @@ void Wifi_WaitMqttData(void);
 void LED_MqttTXBlink(void);
 void LED_MqttRXBlink(void);
 void LED_Mqttconnected(uint8_t set_led);
+void LED_WifiConnected(uint8_t set_led);
 
 #ifdef __cplusplus
 }

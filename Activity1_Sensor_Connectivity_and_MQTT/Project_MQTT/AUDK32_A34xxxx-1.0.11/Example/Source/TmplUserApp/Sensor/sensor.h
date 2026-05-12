@@ -32,6 +32,12 @@ typedef struct {
 uint8_t Sensor_TestAll(void);
 
 /**
+ * @brief  Read all sensors silently (no terminal output)
+ * @return Pointer to internal SensorData_t (valid until next call)
+ */
+SensorData_t* Sensor_ReadOnly(void);
+
+/**
  * @brief  Read all sensors and print results to debug terminal
  * @return Pointer to internal SensorData_t (valid until next call)
  */

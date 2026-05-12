@@ -5,23 +5,34 @@
 #include "../LISDE12TR/LIS2DE12_app.h"
 #include "../MP23ABS1/mp23abs1_sensor.h"
 #include "hal_pcu.h"
+#include "abov_config.h"
 #include <string.h>
 #include <stdio.h>
 
-/* LED pin definitions (matches prv_user_code.c) */
-#define S_LED_PORT      PCU_ID_B
-#define S_LED_DEBUG     PCU_PIN_ID_4
-#define S_LED_SHT40     PCU_PIN_ID_5
-#define S_LED_BATTERY   PCU_PIN_ID_9
-#define S_LED_LIS2DE12  PCU_PIN_ID_10
-#define S_LED_MIC       PCU_PIN_ID_11
-#define S_LED_ESP32     PCU_PIN_ID_12
-#define S_LED_TEST1     PCU_PIN_ID_13
-#define S_LED_TEST2     PCU_PIN_ID_14
-#define S_LED_TEST3     PCU_PIN_ID_15
+/* LED pin definitions */
+#define S_LED1_PORT   PCU_ID_B
+#define S_LED1_PIN    PCU_PIN_ID_4    // LED1  -> PB4
+#define S_LED2_PORT   PCU_ID_B
+#define S_LED2_PIN    PCU_PIN_ID_9    // LED2  -> PB9
+#define S_LED3_PORT   PCU_ID_F
+#define S_LED3_PIN    PCU_PIN_ID_7    // LED3  -> PF7
+#define S_LED4_PORT   PCU_ID_B
+#define S_LED4_PIN    PCU_PIN_ID_5    // LED4  -> PB5
+#define S_LED5_PORT   PCU_ID_B
+#define S_LED5_PIN    PCU_PIN_ID_10   // LED5  -> PB10
+#define S_LED6_PORT   PCU_ID_B
+#define S_LED6_PIN    PCU_PIN_ID_11   // LED6  -> PB11
+#define S_LED7_PORT   PCU_ID_B
+#define S_LED7_PIN    PCU_PIN_ID_12   // LED7  -> PB12
+#define S_LED8_PORT   PCU_ID_B
+#define S_LED8_PIN    PCU_PIN_ID_13   // LED8  -> PB13
+#define S_LED9_PORT   PCU_ID_B
+#define S_LED9_PIN    PCU_PIN_ID_14   // LED9  -> PB14
+#define S_LED10_PORT  PCU_ID_B
+#define S_LED10_PIN   PCU_PIN_ID_15   // LED10 -> PB15
 
-static void s_led_on(PCU_PIN_ID_e pin)  { HAL_PCU_SetOutputBit(S_LED_PORT, pin, PCU_OUTPUT_BIT_SET); }
-static void s_led_off(PCU_PIN_ID_e pin) { HAL_PCU_SetOutputBit(S_LED_PORT, pin, PCU_OUTPUT_BIT_CLEAR); }
+static void s_led_on(PCU_ID_e port, PCU_PIN_ID_e pin)  { HAL_PCU_SetOutputBit(port, pin, PCU_OUTPUT_BIT_CLEAR); }
+static void s_led_off(PCU_ID_e port, PCU_PIN_ID_e pin) { HAL_PCU_SetOutputBit(port, pin, PCU_OUTPUT_BIT_SET); }
 
 /* Internal sensor data */
 static SensorData_t s_data;
@@ -82,23 +93,35 @@ static uint32_t Compute_RMS(const uint16_t *buf, uint32_t len)
 /*-------------------------------------------------------------------*/
 void Sensor_LEDTest(void)
 {
-    PCU_PIN_ID_e ledArray[] = {S_LED_DEBUG, S_LED_SHT40, S_LED_BATTERY, S_LED_LIS2DE12,
-                               S_LED_MIC, S_LED_ESP32, S_LED_TEST1, S_LED_TEST2, S_LED_TEST3};
+    typedef struct { PCU_ID_e port; PCU_PIN_ID_e pin; } LedEntry;
+    LedEntry ledArray[] = {
+        {S_LED1_PORT,  S_LED1_PIN},
+        {S_LED2_PORT,  S_LED2_PIN},
+        {S_LED3_PORT,  S_LED3_PIN},
+        {S_LED4_PORT,  S_LED4_PIN},
+        {S_LED5_PORT,  S_LED5_PIN},
+        {S_LED6_PORT,  S_LED6_PIN},
+        {S_LED7_PORT,  S_LED7_PIN},
+        {S_LED8_PORT,  S_LED8_PIN},
+        {S_LED9_PORT,  S_LED9_PIN},
+        {S_LED10_PORT, S_LED10_PIN},
+    };
     uint32_t i;
 
     DebugFramework_PutsLine("\n\r========================================");
     DebugFramework_PutsLine("         LED HARDWARE TEST");
     DebugFramework_PutsLine("========================================\n\r");
 
-    for (i = 0; i < 9; i++)
+    for (i = 0; i < 10; i++)
     {
-        s_led_on(ledArray[i]);
+        s_led_on(ledArray[i].port, ledArray[i].pin);
         SYSTICK_Wait(200);
     }
+
     SYSTICK_Wait(500);
-    for (i = 0; i < 9; i++)
+    for (i = 0; i < 10; i++)
     {
-        s_led_off(ledArray[i]);
+        s_led_off(ledArray[i].port, ledArray[i].pin);
         SYSTICK_Wait(100);
     }
 
@@ -174,6 +197,51 @@ uint8_t Sensor_TestAll(void)
 }
 
 /*-------------------------------------------------------------------*/
+SensorData_t* Sensor_ReadOnly(void)
+{
+    memset(&s_data, 0, sizeof(s_data));
+
+    /* SHT40 */
+    if (SHT40_ReadSensor() == 0) {
+        s_data.sht40_ok       = 1;
+        s_data.temperature_mC = sht40_temperature;
+        s_data.humidity_mRH   = sht40_humidity;
+    }
+
+    /* Battery */
+    {
+        uint16_t vcoreRaw = 0;
+        uint32_t avddMv   = 0;
+        if (BatteryReading_ReadSupplyVoltage(&vcoreRaw, &avddMv) == 0) {
+            s_data.battery_ok = 1;
+            s_data.battery_mV = avddMv;
+        }
+    }
+
+    /* LIS2DE12 */
+    if (LIS2DE12_ReadAcceleration() == 0) {
+        s_data.lis2de12_ok = 1;
+        s_data.accel_x_mg  = lis2de12_accel_x;
+        s_data.accel_y_mg  = lis2de12_accel_y;
+        s_data.accel_z_mg  = lis2de12_accel_z;
+    }
+
+    /* MP23ABS1 Microphone */
+    if (MP23ABS1_StartRecording() == MP23ABS1_OK) {
+        SYSTICK_Wait(1000);
+        MP23ABS1_StopRecording();
+        uint32_t count = MP23ABS1_GetSampleCount();
+        if (count > 0) {
+            uint32_t calcLen = (count < AUDIO_BUFFER_SIZE) ? count : AUDIO_BUFFER_SIZE;
+            s_data.mic_ok  = 1;
+            s_data.mic_rms = Compute_RMS(s_AudioBuffer, calcLen);
+        }
+    }
+
+    return &s_data;
+}
+
+/*-------------------------------------------------------------------*/
 SensorData_t* Sensor_ReadAndPrint(void)
 {
     memset(&s_data, 0, sizeof(s_data));
@@ -185,11 +253,6 @@ SensorData_t* Sensor_ReadAndPrint(void)
         s_data.sht40_ok = 1;
         s_data.temperature_mC = sht40_temperature;
         s_data.humidity_mRH   = sht40_humidity;
-        DebugFramework_Printf("[SHT40] Temp: %ld.%03lu C  Hum: %ld.%03lu %%\n\r",
-            (long)(s_data.temperature_mC / 1000),
-            (unsigned long)(s_data.temperature_mC >= 0 ? s_data.temperature_mC % 1000 : (-s_data.temperature_mC) % 1000),
-            (long)(s_data.humidity_mRH / 1000),
-            (unsigned long)(s_data.humidity_mRH % 1000));
     } else {
         DebugFramework_PutsLine("[SHT40] Read FAILED");
     }
@@ -201,8 +264,6 @@ SensorData_t* Sensor_ReadAndPrint(void)
         if (BatteryReading_ReadSupplyVoltage(&vcoreRaw, &avddMv) == 0) {
             s_data.battery_ok = 1;
             s_data.battery_mV = avddMv;
-            DebugFramework_Printf("[BATT]  Voltage: %lu.%03lu V\n\r",
-                (unsigned long)(avddMv / 1000), (unsigned long)(avddMv % 1000));
         } else {
             DebugFramework_PutsLine("[BATT]  Read FAILED");
         }
@@ -214,8 +275,6 @@ SensorData_t* Sensor_ReadAndPrint(void)
         s_data.accel_x_mg = lis2de12_accel_x;
         s_data.accel_y_mg = lis2de12_accel_y;
         s_data.accel_z_mg = lis2de12_accel_z;
-        DebugFramework_Printf("[ACCEL] X:%d  Y:%d  Z:%d mg\n\r",
-            s_data.accel_x_mg, s_data.accel_y_mg, s_data.accel_z_mg);
     } else {
         DebugFramework_PutsLine("[ACCEL] Read FAILED");
     }
@@ -230,16 +289,23 @@ SensorData_t* Sensor_ReadAndPrint(void)
             uint32_t calcLen = (count < AUDIO_BUFFER_SIZE) ? count : AUDIO_BUFFER_SIZE;
             s_data.mic_ok  = 1;
             s_data.mic_rms = Compute_RMS(s_AudioBuffer, calcLen);
-            DebugFramework_Printf("[MIC]   RMS: %lu (samples: %lu)\n\r",
-                (unsigned long)s_data.mic_rms, (unsigned long)count);
         } else {
             DebugFramework_PutsLine("[MIC]   No samples captured");
         }
     } else {
         DebugFramework_PutsLine("[MIC]   Start FAILED");
     }
+    DebugFramework_Printf("[SHT40] Temp: %ld.%03lu C  Hum: %ld.%03lu %%\n\r",
+    (long)(s_data.temperature_mC / 1000),
+    (unsigned long)(s_data.temperature_mC >= 0 ? s_data.temperature_mC % 1000 : (-s_data.temperature_mC) % 1000),
+    (long)(s_data.humidity_mRH / 1000),
+    (unsigned long)(s_data.humidity_mRH % 1000));
+    DebugFramework_Printf("[BATT]  Voltage: %lu.%03lu V\n\r",
+    (unsigned long)(s_data.battery_mV / 1000), (unsigned long)(s_data.battery_mV % 1000));
+    DebugFramework_Printf("[ACCEL] X:%d  Y:%d  Z:%d mg\n\r",
+    s_data.accel_x_mg, s_data.accel_y_mg, s_data.accel_z_mg);
+    DebugFramework_Printf("[MIC]   RMS: %lu\n\r", (unsigned long)s_data.mic_rms);
 
-    DebugFramework_PutsLine("-----------------------");
     return &s_data;
 }
 

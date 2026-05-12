@@ -272,9 +272,9 @@ static __inline void PRV_PORT_Init(void)
     PF->BSR = 0x0;
     PF->BCR = 0x0;
     PF->STR = 0x0;
-    PF->MR1 = 0x77777777;
+    PF->MR1 = 0x07777777;  /* PF7 = ALT_0 (GPIO), others = alt */
     PF->MR2 = 0x77777777;
-    PF->CR = 0xffffffff;
+    PF->CR = 0xffff3fff;   /* PF7 = output push-pull, others = input */
     PF->PRCR = 0x0;
 
     /* PORT - G */

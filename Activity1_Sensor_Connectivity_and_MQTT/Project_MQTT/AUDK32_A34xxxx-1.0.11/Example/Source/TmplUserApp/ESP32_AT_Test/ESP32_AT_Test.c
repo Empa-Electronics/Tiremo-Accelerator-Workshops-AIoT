@@ -21,44 +21,36 @@ int ESP32_Simple_AT_Test(void)
 {
     char rx_buffer[64];
     HAL_ERR_e result;
-    
-    memset(rx_buffer, 0, sizeof(rx_buffer));
-    
-    DebugFramework_Puts("Sent: AT\r\n");
+    uint8_t attempt = 0;
+    const uint8_t MAX_ATTEMPTS = 10;
 
-    // Send AT command
-    HAL_UART_Transmit(UART_ID_2, (uint8_t*)"AT\r\n", 4, true);
-        
-    // Receive response - only expect small response (~20 bytes max)
-    result = HAL_UART_Receive(UART_ID_2, (uint8_t*)rx_buffer, 20, true);
-    
-    DebugFramework_Printf("Received (%s): %s\n", 
-                          (result == HAL_ERR_OK) ? "OK" : "TIMEOUT", 
-                          rx_buffer);
-    
-    // Debug: Tüm buffer'ı hex olarak yazdır
-    DebugFramework_Puts("Buffer HEX: ");
-    for (int i = 0; i < 20; i++)
+    while (attempt < MAX_ATTEMPTS)
     {
-        DebugFramework_Printf("%02X ", (uint8_t)rx_buffer[i]);
+        attempt++;
+        memset(rx_buffer, 0, sizeof(rx_buffer));
+
+        /* Send AT command */
+        HAL_UART_Transmit(UART_ID_2, (uint8_t*)"AT\r\n", 4, true);
+
+        /* Receive response */
+        result = HAL_UART_Receive(UART_ID_2, (uint8_t*)rx_buffer, 20, true);
+
+        /* Check if OK in response */
+        if (strstr(rx_buffer, "OK") != NULL)
+        {
+            if (attempt > 1)
+            {
+                DebugFramework_Printf("[AT] OK received on attempt %u\n\r", attempt);
+            }
+            return 0;
+        }
+
+        DebugFramework_Printf("[AT] Attempt %u/%u: no OK, retrying...\n\r", attempt, MAX_ATTEMPTS);
+        (void)result;
     }
-    DebugFramework_Puts("\n");
-    
-    // Check if OK in response
-    if (strstr(rx_buffer, "OK") != NULL)
-    {
-        DebugFramework_Puts("[OK] ESP32 is working!\n");
-        return 0;
-    }
-    else
-    {
-        DebugFramework_Puts("[FAIL] No OK response!\n");
-        DebugFramework_Printf("Debug: buffer[0]=%d ('%c'), len=%d\n", 
-                              rx_buffer[0], 
-                              (rx_buffer[0] >= 32 ? rx_buffer[0] : '.'), 
-                              strlen(rx_buffer));
-        return -1;
-    }
+
+    DebugFramework_PutsLine("[AT] No OK after max attempts!");
+    return -1;
 }
 
 // Placeholder functions

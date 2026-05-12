@@ -63,7 +63,7 @@ int16_t sht4x_measure_high_precision_ticks(uint16_t* temperature_ticks,
         return error;
     }
 
-    sensirion_i2c_hal_sleep_usec(10000);
+    sensirion_i2c_hal_sleep_usec(100);
 
     error = sensirion_i2c_read_data_inplace(SHT4X_I2C_ADDRESS, &buffer[0], 4);
     if (error) {
@@ -101,7 +101,7 @@ int16_t sht4x_measure_medium_precision_ticks(uint16_t* temperature_ticks,
         return error;
     }
 
-    sensirion_i2c_hal_sleep_usec(5000);
+    sensirion_i2c_hal_sleep_usec(1000);
 
     error = sensirion_i2c_read_data_inplace(SHT4X_I2C_ADDRESS, &buffer[0], 4);
     if (error) {
@@ -140,7 +140,7 @@ int16_t sht4x_measure_lowest_precision_ticks(uint16_t* temperature_ticks,
         return error;
     }
 
-    sensirion_i2c_hal_sleep_usec(2000);
+    sensirion_i2c_hal_sleep_usec(1000);
 
     error = sensirion_i2c_read_data_inplace(SHT4X_I2C_ADDRESS, &buffer[0], 4);
     if (error) {
@@ -418,7 +418,7 @@ int16_t sht4x_serial_number(uint32_t* serial_number) {
         return error;
     }
 
-    sensirion_i2c_hal_sleep_usec(10000);
+    sensirion_i2c_hal_sleep_usec(1000);
 
     error = sensirion_i2c_read_data_inplace(SHT4X_I2C_ADDRESS, &buffer[0], 4);
     if (error) {
