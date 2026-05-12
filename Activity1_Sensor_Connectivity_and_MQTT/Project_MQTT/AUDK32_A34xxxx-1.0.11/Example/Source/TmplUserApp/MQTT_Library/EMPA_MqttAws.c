@@ -1,5 +1,6 @@
 #include "EMPA_MqttAws.h"
 #include <string.h>
+#include <stdio.h>
 
 MQTT_Config mqttConfig = {
     .mqttPacketBuffer = mqttPacketBuffer,
@@ -9,7 +10,7 @@ MQTT_Config mqttConfig = {
     .wifiPassword = "Empa1982",
     .timezone = 3,
     .mode_mqtt = MQTT_TLS_1,
-    .clientID = "GW-001",
+    .clientID = "Empa",
     .username = "Empa123",
     .mqttPassword = "159753456Empa",
     .keepAlive = 300,
@@ -33,7 +34,8 @@ uint8_t MQTT_ConnectBroker(void)
             LED_Mqttconnected(1);
 
             /* Publish connection confirmation */
-            char msg[] = "mqtt successful";
+            char msg[64];
+            snprintf(msg, sizeof(msg), "%s mqtt successful", mqttConfig.clientID);
             memset(mqttPacketBuffer, 0, MQTT_DATA_PACKET_BUFF_SIZE);
             Wifi_MqttPubRaw2(mqttPacketBuffer, mqttConfig.pubtopic,
                 (uint16_t)strlen(msg), msg, QOS_0, RTN_0, POLLING_MODE);
@@ -50,20 +52,23 @@ uint8_t MQTT_ConnectBroker(void)
 void MQTT_PublishSensorData(const SensorData_t *pData)
 {
     static char jsonBuf[256];
+    static char prefixedBuf[280];
 
-    uint16_t len = Sensor_FormatJSON(pData, jsonBuf, sizeof(jsonBuf));
+    Sensor_FormatJSON(pData, jsonBuf, sizeof(jsonBuf));
+    uint16_t len = (uint16_t)snprintf(prefixedBuf, sizeof(prefixedBuf), "%s %s", mqttConfig.clientID, jsonBuf);
 
     memset(mqttPacketBuffer, 0, MQTT_DATA_PACKET_BUFF_SIZE);
     LED_MqttTXBlink();
     Wifi_MqttPubRaw2(mqttPacketBuffer, mqttConfig.pubtopic,
-        len, jsonBuf, QOS_0, RTN_0, POLLING_MODE);
+        len, prefixedBuf, QOS_0, RTN_0, POLLING_MODE);
 }
 
 void MY_MqttAwsProcess(void)
 {
     if (MQTT_ConnectBroker() == 0)
     {
-        char msg[] = "mqtt successful";
+        char msg[64];
+        snprintf(msg, sizeof(msg), "%s mqtt successful", mqttConfig.clientID);
         memset(mqttPacketBuffer, 0, MQTT_DATA_PACKET_BUFF_SIZE);
         LED_MqttTXBlink();
         Wifi_MqttPubRaw2(mqttPacketBuffer, mqttConfig.pubtopic,
