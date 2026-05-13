@@ -1,0 +1,4 @@
+[submodule "abov-openocd"]
+	path = abov-openocd
+	url = https://git.code.sf.net/u/abovsemic/openocd
+	branch = abov32
